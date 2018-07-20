@@ -18,6 +18,7 @@
 		761CA16721011CBB00411319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761CA16521011CBB00411319 /* LaunchScreen.storyboard */; };
 		768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */; };
 		768D78A72102983800D19CC6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A62102983800D19CC6 /* WebViewController.swift */; };
+		768D78AC2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78AB2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		761CA16821011CBB00411319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountStep2ViewController.swift; sourceTree = "<group>"; };
 		768D78A62102983800D19CC6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		768D78AB2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyOptionsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 		761B543C2101229E007AE5CD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				768D78A821029F7D00D19CC6 /* PrivacyOptions */,
 				768D78A52102981E00D19CC6 /* WebView */,
 				761B544C21014019007AE5CD /* CreateAccount */,
 				761B543F210122D0007AE5CD /* GetStarted */,
@@ -138,6 +141,14 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		768D78A821029F7D00D19CC6 /* PrivacyOptions */ = {
+			isa = PBXGroup;
+			children = (
+				768D78AB2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift */,
+			);
+			path = PrivacyOptions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,6 +224,7 @@
 				761B544E21014059007AE5CD /* CreateAccountViewController.swift in Sources */,
 				768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */,
 				761B5446210123F9007AE5CD /* GetStartedViewController.swift in Sources */,
+				768D78AC2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift in Sources */,
 				761CA15F21011CB600411319 /* ViewController.swift in Sources */,
 				768D78A72102983800D19CC6 /* WebViewController.swift in Sources */,
 				761CA15D21011CB600411319 /* AppDelegate.swift in Sources */,

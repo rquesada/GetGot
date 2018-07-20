@@ -14,6 +14,7 @@ class CreateAccountStep2ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var privacyPoliceTextView: UITextView!
     @IBOutlet weak var signUpButton: UIButton!
     
+    var isUsingPhone:Bool!
     var name:String!
     var phone:String!
     var openURL:URL!
@@ -56,6 +57,7 @@ class CreateAccountStep2ViewController: UIViewController, UITextViewDelegate {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         if URL.absoluteString == "https://PP"{
             debugPrint("Open privacy options")
+            self.performSegue(withIdentifier: "privacySegue", sender: nil)
         }else{
             self.openURL = URL
             self.performSegue(withIdentifier: "openURLSegue", sender: nil)

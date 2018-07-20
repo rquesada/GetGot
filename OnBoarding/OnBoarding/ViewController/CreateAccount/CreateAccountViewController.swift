@@ -65,6 +65,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
             let step2VC = segue.destination as! CreateAccountStep2ViewController
             step2VC.name = self.nameTextField.text
             step2VC.phone = self.phoneTextField.text
+            step2VC.isUsingPhone = self.phoneTextStatus == "phone" ? true : false
         }
      }
     
