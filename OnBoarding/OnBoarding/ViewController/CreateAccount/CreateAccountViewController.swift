@@ -14,7 +14,6 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var nameImageCheck: UIImageView!
     @IBOutlet weak var phoneImageCheck: UIImageView!
-    
     @IBOutlet weak var errorLabel: UILabel!
     var nextButton: UIBarButtonItem!
     var flexibleSpace: UIBarButtonItem!
@@ -59,6 +58,17 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         self.nameTextField.becomeFirstResponder()
     }
     
+    
+     // MARK: - Navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "step2Segue"{
+            let step2VC = segue.destination as! CreateAccountStep2ViewController
+            step2VC.name = self.nameTextField.text
+            step2VC.phone = self.phoneTextField.text
+        }
+     }
+    
+    // MARK: - Handler
     @IBAction func cancelHandler(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -67,12 +77,14 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         if self.nameTextField.isFirstResponder{
             if self.isValidPhone{
                 debugPrint("Check with server")
+                self.performSegue(withIdentifier: "step2Segue", sender: nil)
             }else{
                 self.phoneTextField.becomeFirstResponder()
             }
         }else{
             if self.isValidName{
                 debugPrint("Check with server")
+                self.performSegue(withIdentifier: "step2Segue", sender: nil)
             }else{
                 self.nameTextField.becomeFirstResponder()
             }

@@ -16,6 +16,8 @@
 		761CA16221011CB600411319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761CA16021011CB600411319 /* Main.storyboard */; };
 		761CA16421011CBB00411319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761CA16321011CBB00411319 /* Assets.xcassets */; };
 		761CA16721011CBB00411319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761CA16521011CBB00411319 /* LaunchScreen.storyboard */; };
+		768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */; };
+		768D78A72102983800D19CC6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A62102983800D19CC6 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		761CA16321011CBB00411319 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		761CA16621011CBB00411319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		761CA16821011CBB00411319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountStep2ViewController.swift; sourceTree = "<group>"; };
+		768D78A62102983800D19CC6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 		761B543C2101229E007AE5CD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				768D78A52102981E00D19CC6 /* WebView */,
 				761B544C21014019007AE5CD /* CreateAccount */,
 				761B543F210122D0007AE5CD /* GetStarted */,
 				761B543E210122C1007AE5CD /* Main */,
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				761B544D21014059007AE5CD /* CreateAccountViewController.swift */,
+				768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -122,6 +128,14 @@
 				761CA16821011CBB00411319 /* Info.plist */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		768D78A52102981E00D19CC6 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				768D78A62102983800D19CC6 /* WebViewController.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				761B544E21014059007AE5CD /* CreateAccountViewController.swift in Sources */,
+				768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */,
 				761B5446210123F9007AE5CD /* GetStartedViewController.swift in Sources */,
 				761CA15F21011CB600411319 /* ViewController.swift in Sources */,
+				768D78A72102983800D19CC6 /* WebViewController.swift in Sources */,
 				761CA15D21011CB600411319 /* AppDelegate.swift in Sources */,
 				761B544B2101301C007AE5CD /* UIUtils.swift in Sources */,
 			);
@@ -353,12 +369,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FZDZTD7RCE;
 				INFOPLIST_FILE = OnBoarding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.OnBoarding;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test123.OnBoarding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -370,12 +387,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FZDZTD7RCE;
 				INFOPLIST_FILE = OnBoarding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.OnBoarding;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test123.OnBoarding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
