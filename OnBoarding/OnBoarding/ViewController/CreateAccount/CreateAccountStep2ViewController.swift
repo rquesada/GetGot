@@ -41,7 +41,31 @@ class CreateAccountStep2ViewController: UIViewController, UITextViewDelegate {
         self.privacyPoliceTextView.attributedText = attributedString
     }
 
-   
+    @IBAction func editHandler(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func signupHandler(_ sender: Any) {
+        if self.isUsingPhone{
+            self.sentVerifyCode()
+        }else{
+            
+        }
+    }
+    
+    
+    func sentVerifyCode(){
+        let message  = "We'll text your verification code to \(self.phone!). Standart SMS fees may apply."
+        let alert = UIAlertController(title: "Verify Phone", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Edit", style: UIAlertActionStyle.default, handler: { action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
+            self.performSegue(withIdentifier: "enterCodeSegue", sender: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func backHandler(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -64,5 +88,4 @@ class CreateAccountStep2ViewController: UIViewController, UITextViewDelegate {
         }
         return false
     }
-
 }

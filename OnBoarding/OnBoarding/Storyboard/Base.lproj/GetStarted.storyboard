@@ -158,6 +158,31 @@
             </objects>
             <point key="canvasLocation" x="1000.8" y="152.47376311844079"/>
         </scene>
+        <!--Enter Code View Controller-->
+        <scene sceneID="9gQ-0t-zjK">
+            <objects>
+                <viewController id="e47-MV-JQl" customClass="EnterCodeViewController" customModule="OnBoarding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6dV-aO-FAc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJP-Xp-0kn">
+                                <rect key="frame" x="166" y="235" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="r3R-71-VZW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EQJ-GN-pVo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gbg-FZ-v8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2740" y="-565.36731634182911"/>
+        </scene>
         <!--Create Account Step2 View Controller-->
         <scene sceneID="gYf-zC-TTX">
             <objects>
@@ -239,6 +264,16 @@
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupHandler:" destination="hec-IU-NrB" eventType="touchUpInside" id="pLJ-Gw-Qmr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB4-uM-Kud">
+                                <rect key="frame" x="36" y="176" width="303" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="editHandler:" destination="hec-IU-NrB" eventType="touchUpInside" id="oVw-cw-kRo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -251,11 +286,12 @@
                         <outlet property="signUpButton" destination="LcV-op-5DA" id="2mT-H8-CF6"/>
                         <segue destination="6Xb-m1-JHL" kind="show" identifier="openURLSegue" id="D8D-N8-Axf"/>
                         <segue destination="hzo-0u-R9L" kind="show" identifier="privacySegue" id="UDN-pB-U8T"/>
+                        <segue destination="CXz-5q-sRq" kind="showDetail" identifier="enterCodeSegue" id="Jb2-aQ-hEQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gt-ra-79c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1799" y="152"/>
+            <point key="canvasLocation" x="1797.5999999999999" y="151.57421289355324"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="utv-xr-IKF">
@@ -426,6 +462,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYH-BN-NOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1826" y="1018"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ana-Hi-aA4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CXz-5q-sRq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dDA-ol-aeH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uDQ-zh-PBk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e47-MV-JQl" kind="relationship" relationship="rootViewController" id="LgV-Sk-m2j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QY2-ul-DhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.8" y="-565.36731634182911"/>
         </scene>
     </scenes>
     <resources>

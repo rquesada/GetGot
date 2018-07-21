@@ -19,6 +19,7 @@
 		768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */; };
 		768D78A72102983800D19CC6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A62102983800D19CC6 /* WebViewController.swift */; };
 		768D78AC2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78AB2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift */; };
+		768D78AE2102B3FA00D19CC6 /* EnterCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78AD2102B3FA00D19CC6 /* EnterCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountStep2ViewController.swift; sourceTree = "<group>"; };
 		768D78A62102983800D19CC6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		768D78AB2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyOptionsTableViewController.swift; sourceTree = "<group>"; };
+		768D78AD2102B3FA00D19CC6 /* EnterCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				761B544D21014059007AE5CD /* CreateAccountViewController.swift */,
 				768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */,
+				768D78AD2102B3FA00D19CC6 /* EnterCodeViewController.swift */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				761B544E21014059007AE5CD /* CreateAccountViewController.swift in Sources */,
 				768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */,
 				761B5446210123F9007AE5CD /* GetStartedViewController.swift in Sources */,
+				768D78AE2102B3FA00D19CC6 /* EnterCodeViewController.swift in Sources */,
 				768D78AC2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift in Sources */,
 				761CA15F21011CB600411319 /* ViewController.swift in Sources */,
 				768D78A72102983800D19CC6 /* WebViewController.swift in Sources */,
