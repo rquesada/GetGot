@@ -20,6 +20,7 @@
 		768D78A72102983800D19CC6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A62102983800D19CC6 /* WebViewController.swift */; };
 		768D78AC2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78AB2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift */; };
 		768D78AE2102B3FA00D19CC6 /* EnterCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78AD2102B3FA00D19CC6 /* EnterCodeViewController.swift */; };
+		768D78B02102D8F200D19CC6 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78AF2102D8F200D19CC6 /* CreatePasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		768D78A62102983800D19CC6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		768D78AB2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyOptionsTableViewController.swift; sourceTree = "<group>"; };
 		768D78AD2102B3FA00D19CC6 /* EnterCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeViewController.swift; sourceTree = "<group>"; };
+		768D78AF2102D8F200D19CC6 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				761B544D21014059007AE5CD /* CreateAccountViewController.swift */,
 				768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */,
 				768D78AD2102B3FA00D19CC6 /* EnterCodeViewController.swift */,
+				768D78AF2102D8F200D19CC6 /* CreatePasswordViewController.swift */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				768D78A72102983800D19CC6 /* WebViewController.swift in Sources */,
 				761CA15D21011CB600411319 /* AppDelegate.swift in Sources */,
 				761B544B2101301C007AE5CD /* UIUtils.swift in Sources */,
+				768D78B02102D8F200D19CC6 /* CreatePasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

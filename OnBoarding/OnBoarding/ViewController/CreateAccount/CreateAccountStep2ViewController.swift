@@ -74,6 +74,8 @@ class CreateAccountStep2ViewController: UIViewController, UITextViewDelegate {
         if let nav = segue.destination as? UINavigationController,
             let webVC = nav.topViewController as? WebViewController{
             webVC.openURL = self.openURL
+        }else if let enterCodeVC = segue.destination as? EnterCodeViewController{
+                enterCodeVC.phone = self.phone
         }
     }
     

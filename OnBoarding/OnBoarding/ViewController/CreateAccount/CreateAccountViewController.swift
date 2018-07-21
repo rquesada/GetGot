@@ -58,7 +58,6 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         self.nameTextField.becomeFirstResponder()
     }
     
-    
      // MARK: - Navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "step2Segue"{
