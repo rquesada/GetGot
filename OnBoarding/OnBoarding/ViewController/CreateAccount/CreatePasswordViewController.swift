@@ -48,7 +48,7 @@ class CreatePasswordViewController: UIViewController {
     }
     
     @objc func nextHandler(){
-        debugPrint("Next")
+        self.performSegue(withIdentifier: "syncContactsSegue", sender: nil)
     }
 
     @IBAction func revealPasswordHandler(_ sender: Any) {

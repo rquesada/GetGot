@@ -231,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbg-FZ-v8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2740" y="-565.36731634182911"/>
+            <point key="canvasLocation" x="2514" y="-707"/>
         </scene>
         <!--Create Password View Controller-->
         <scene sceneID="Ca1-Yn-ZaB">
@@ -274,7 +274,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="e47-MV-JQl" id="5wD-kt-SOU"/>
                                 </connections>
@@ -312,11 +312,85 @@
                         <outlet property="errorLabel" destination="ojI-AZ-oZZ" id="wWj-ii-y9I"/>
                         <outlet property="passwordTextField" destination="cH5-lV-PiX" id="whm-Jn-GMR"/>
                         <outlet property="revealPassword" destination="eKR-Os-FTT" id="KOu-1z-LJn"/>
+                        <segue destination="CVo-tt-dqw" kind="show" identifier="syncContactsSegue" id="hY8-cf-2b4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yai-rJ-Fda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3612" y="-576.1619190404798"/>
+            <point key="canvasLocation" x="3585" y="-707"/>
+        </scene>
+        <!--Sync Contacts View Controller-->
+        <scene sceneID="zfu-bi-84C">
+            <objects>
+                <viewController id="CVo-tt-dqw" customClass="SyncContactsViewController" customModule="OnBoarding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B9M-AD-Xn4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect your address book to find people you may know on Twitter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P72-B7-4qD">
+                                <rect key="frame" x="19" y="75" width="337" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqF-sq-V30">
+                                <rect key="frame" x="115" y="192" width="144" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Sync contacts">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="syncContactsHandler:" destination="CVo-tt-dqw" eventType="touchUpInside" id="Sow-6g-Rix"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GG-zc-1En">
+                                <rect key="frame" x="143" y="271" width="88" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Not now"/>
+                                <connections>
+                                    <action selector="notNowHandler:" destination="CVo-tt-dqw" eventType="touchUpInside" id="B9y-hl-ZTC"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jyq-tt-qVB">
+                                <rect key="frame" x="16" y="561" width="337" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Contacts from your address book will be uploaded to Twitter on an ongoing basis. You can turn off syncing and remove previously uploaded contacts in your settings. Learn More</string>
+                                        <attributes>
+                                            <color key="NSColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CVo-tt-dqw" id="5a8-49-Urk"/>
+                                </connections>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitter_blue" translatesAutoresizingMaskIntoConstraints="NO" id="svB-rh-gjX">
+                                <rect key="frame" x="167" y="39" width="40" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="W69-LU-1Yu"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="Jyq-tt-qVB" id="aB8-uq-iWs"/>
+                        <outlet property="syncContactsButton" destination="yqF-sq-V30" id="4kb-Ks-1ju"/>
+                        <segue destination="6Xb-m1-JHL" kind="show" identifier="openURLSegue2" id="f4a-TQ-U7j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9WS-vJ-9di" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4409" y="-707"/>
         </scene>
         <!--Create Account Step2 View Controller-->
         <scene sceneID="gYf-zC-TTX">
@@ -422,6 +496,7 @@
                         <segue destination="6Xb-m1-JHL" kind="show" identifier="openURLSegue" id="D8D-N8-Axf"/>
                         <segue destination="hzo-0u-R9L" kind="show" identifier="privacySegue" id="UDN-pB-U8T"/>
                         <segue destination="e47-MV-JQl" kind="show" identifier="enterCodeSegue" id="DOK-kr-D6d"/>
+                        <segue destination="Zgv-4C-ld1" kind="show" identifier="passwordSegue2" id="LsJ-qR-mYY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gt-ra-79c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -603,4 +678,8 @@
         <image name="check_green" width="512" height="512"/>
         <image name="twitter_blue" width="2000" height="1624"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="f4a-TQ-U7j"/>
+        <segue reference="Y3s-Lt-BGI"/>
+    </inferredMetricsTieBreakers>
 </document>

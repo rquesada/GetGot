@@ -49,7 +49,7 @@ class CreateAccountStep2ViewController: UIViewController, UITextViewDelegate {
         if self.isUsingPhone{
             self.sentVerifyCode()
         }else{
-            
+            self.performSegue(withIdentifier: "passwordSegue2", sender: nil)
         }
     }
     
