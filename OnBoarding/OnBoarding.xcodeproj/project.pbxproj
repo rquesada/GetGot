@@ -22,6 +22,7 @@
 		768D78AE2102B3FA00D19CC6 /* EnterCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78AD2102B3FA00D19CC6 /* EnterCodeViewController.swift */; };
 		768D78B02102D8F200D19CC6 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78AF2102D8F200D19CC6 /* CreatePasswordViewController.swift */; };
 		768D78B32102E3DB00D19CC6 /* SyncContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78B22102E3DB00D19CC6 /* SyncContactsViewController.swift */; };
+		768D78B62102EB8400D19CC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78B52102EB8400D19CC6 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		768D78AD2102B3FA00D19CC6 /* EnterCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeViewController.swift; sourceTree = "<group>"; };
 		768D78AF2102D8F200D19CC6 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
 		768D78B22102E3DB00D19CC6 /* SyncContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsViewController.swift; sourceTree = "<group>"; };
+		768D78B52102EB8400D19CC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		761B543C2101229E007AE5CD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				768D78B42102EB7400D19CC6 /* Login */,
 				768D78B12102E3C400D19CC6 /* SyncContacts */,
 				768D78A821029F7D00D19CC6 /* PrivacyOptions */,
 				768D78A52102981E00D19CC6 /* WebView */,
@@ -166,6 +169,14 @@
 			path = SyncContacts;
 			sourceTree = "<group>";
 		};
+		768D78B42102EB7400D19CC6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				768D78B52102EB8400D19CC6 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768D78B62102EB8400D19CC6 /* LoginViewController.swift in Sources */,
 				768D78B32102E3DB00D19CC6 /* SyncContactsViewController.swift in Sources */,
 				761B544E21014059007AE5CD /* CreateAccountViewController.swift in Sources */,
 				768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */,

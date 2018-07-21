@@ -63,6 +63,7 @@
                     <connections>
                         <outlet property="getStartedButton" destination="krd-gm-zqz" id="iYr-1y-2Go"/>
                         <segue destination="m4D-c1-9qp" kind="show" identifier="createAccountSegue" id="JS6-AU-Xkb"/>
+                        <segue destination="eJS-Fh-aKb" kind="show" identifier="loginSegue" id="rZC-6G-PIc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmm-v6-5SV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -655,6 +656,36 @@
             </objects>
             <point key="canvasLocation" x="3332" y="900.89955022488766"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="jGC-nm-pGi">
+            <objects>
+                <viewController id="eJS-Fh-aKb" customClass="LoginViewController" customModule="OnBoarding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YTo-45-3na">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpE-5o-twm">
+                                <rect key="frame" x="22" y="40" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backHandler:" destination="eJS-Fh-aKb" eventType="touchUpInside" id="CLL-Ue-2fV"/>
+                                    <action selector="backHandler:" destination="hec-IU-NrB" eventType="touchUpInside" id="d6H-rK-ssm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitter_blue" translatesAutoresizingMaskIntoConstraints="NO" id="QPG-7P-yb1">
+                                <rect key="frame" x="167" y="39" width="40" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dsA-jX-ydm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heu-eZ-6z4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="952"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="VAw-eN-A4q">
             <objects>
@@ -679,7 +710,7 @@
         <image name="twitter_blue" width="2000" height="1624"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f4a-TQ-U7j"/>
-        <segue reference="Y3s-Lt-BGI"/>
+        <segue reference="D8D-N8-Axf"/>
+        <segue reference="LsJ-qR-mYY"/>
     </inferredMetricsTieBreakers>
 </document>

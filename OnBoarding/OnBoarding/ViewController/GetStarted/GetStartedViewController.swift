@@ -4,7 +4,7 @@
 //
 //  Created by Roy Quesada on 7/19/18.
 //  Copyright © 2018 Roy Quesada. All rights reserved.
-//
+//83183007/sebas1234
 
 import UIKit
 
@@ -23,6 +23,7 @@ class GetStartedViewController: UIViewController {
 
     @IBAction func loginHandler(_ sender: Any) {
         debugPrint("Show Login")
+        self.performSegue(withIdentifier: "loginSegue", sender: nil)
         
     }
     
