@@ -23,6 +23,7 @@
 		768D78B02102D8F200D19CC6 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78AF2102D8F200D19CC6 /* CreatePasswordViewController.swift */; };
 		768D78B32102E3DB00D19CC6 /* SyncContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78B22102E3DB00D19CC6 /* SyncContactsViewController.swift */; };
 		768D78B62102EB8400D19CC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78B52102EB8400D19CC6 /* LoginViewController.swift */; };
+		768D78B92102EF6200D19CC6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768D78B72102EF6200D19CC6 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		768D78AF2102D8F200D19CC6 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
 		768D78B22102E3DB00D19CC6 /* SyncContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsViewController.swift; sourceTree = "<group>"; };
 		768D78B52102EB8400D19CC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		768D78B82102EF6200D19CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				761CA16021011CB600411319 /* Main.storyboard */,
 				761CA16521011CBB00411319 /* LaunchScreen.storyboard */,
 				761B54422101239A007AE5CD /* GetStarted.storyboard */,
+				768D78B72102EF6200D19CC6 /* Login.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				761CA16721011CBB00411319 /* LaunchScreen.storyboard in Resources */,
 				761CA16421011CBB00411319 /* Assets.xcassets in Resources */,
 				761CA16221011CB600411319 /* Main.storyboard in Resources */,
+				768D78B92102EF6200D19CC6 /* Login.storyboard in Resources */,
 				761B54442101239A007AE5CD /* GetStarted.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +293,14 @@
 				761CA16621011CBB00411319 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		768D78B72102EF6200D19CC6 /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				768D78B82102EF6200D19CC6 /* Base */,
+			);
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
