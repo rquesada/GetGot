@@ -30,9 +30,6 @@
                                 <rect key="frame" x="323" y="40" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Menu"/>
-                                <connections>
-                                    <action selector="backHandler:" destination="QcL-Xd-OOD" eventType="touchUpInside" id="5bQ-Pi-uO7"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitter_blue" translatesAutoresizingMaskIntoConstraints="NO" id="hHm-SF-4pI">
                                 <rect key="frame" x="167" y="39" width="40" height="32"/>
@@ -69,12 +66,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz3-dZ-Eve">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz3-dZ-Eve">
                                 <rect key="frame" x="22" y="257" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reveal password"/>
                                 <connections>
-                                    <action selector="showPasswordHandler:" destination="QcL-Xd-OOD" eventType="touchUpInside" id="Ae7-5M-8Sl"/>
+                                    <action selector="revealPasswordHandler:" destination="QcL-Xd-OOD" eventType="touchUpInside" id="HOJ-l1-Cc6"/>
                                 </connections>
                             </button>
                         </subviews>

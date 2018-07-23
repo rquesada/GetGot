@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
         self.loginButton.isEnabled = false
         
         self.forgotPasswordButton = UIBarButtonItem(title: "Forgot pasword?", style: UIBarButtonItemStyle.plain, target: self, action:
-            #selector(forgotHandler))
+            #selector(revealPasswordHandler))
         self.flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
         let frame = CGRect(x: 0.0, y: 0.0, width: 375, height: 50)
@@ -75,6 +75,8 @@ class LoginViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func showPasswordHandler(_ sender: Any) {
+    @IBAction func revealPasswordHandler(_ sender: Any) {
+        self.passwordTextField.isSecureTextEntry = !self.passwordTextField.isSecureTextEntry
+        
     }
 }
