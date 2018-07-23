@@ -61,7 +61,7 @@ class EnterCodeViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func backHandler(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func didReceiveHandler(_ sender: Any) {

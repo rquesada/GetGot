@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312394716DBBEA9E897A314E /* Pods_OnBoarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6E31FC7CC1092E854D529D /* Pods_OnBoarding.framework */; };
 		761B54442101239A007AE5CD /* GetStarted.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761B54422101239A007AE5CD /* GetStarted.storyboard */; };
 		761B5446210123F9007AE5CD /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761B5445210123F9007AE5CD /* GetStartedViewController.swift */; };
 		761B544B2101301C007AE5CD /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761B544A2101301C007AE5CD /* UIUtils.swift */; };
@@ -25,6 +26,7 @@
 		768D78B62102EB8400D19CC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78B52102EB8400D19CC6 /* LoginViewController.swift */; };
 		768D78B92102EF6200D19CC6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768D78B72102EF6200D19CC6 /* Login.storyboard */; };
 		76C4B350210635EF008D18B5 /* FindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4B34F210635EF008D18B5 /* FindAccountViewController.swift */; };
+		76C4B354210646F1008D18B5 /* WantResetAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4B353210646F1008D18B5 /* WantResetAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,7 @@
 		761CA16321011CBB00411319 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		761CA16621011CBB00411319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		761CA16821011CBB00411319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7662447321066107000EEA25 /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountStep2ViewController.swift; sourceTree = "<group>"; };
 		768D78A62102983800D19CC6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		768D78AB2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyOptionsTableViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +51,10 @@
 		768D78B52102EB8400D19CC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		768D78B82102EF6200D19CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		76C4B34F210635EF008D18B5 /* FindAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAccountViewController.swift; sourceTree = "<group>"; };
+		76C4B353210646F1008D18B5 /* WantResetAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantResetAccountViewController.swift; sourceTree = "<group>"; };
+		890C2BA5F716A6891325ADBD /* Pods-OnBoarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBoarding.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnBoarding/Pods-OnBoarding.release.xcconfig"; sourceTree = "<group>"; };
+		AA4AE3DF5859D46B7F5A3DF5 /* Pods-OnBoarding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBoarding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnBoarding/Pods-OnBoarding.debug.xcconfig"; sourceTree = "<group>"; };
+		CA6E31FC7CC1092E854D529D /* Pods_OnBoarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnBoarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,16 +62,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312394716DBBEA9E897A314E /* Pods_OnBoarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CC4B34413C95D9502686F9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7662447321066107000EEA25 /* DLRadioButton.framework */,
+				CA6E31FC7CC1092E854D529D /* Pods_OnBoarding.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		761B543C2101229E007AE5CD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				76C4B34E210635C8008D18B5 /* FindAccount */,
+				76C4B352210646D3008D18B5 /* ForgotPassword */,
 				768D78B42102EB7400D19CC6 /* Login */,
 				768D78B12102E3C400D19CC6 /* SyncContacts */,
 				768D78A821029F7D00D19CC6 /* PrivacyOptions */,
@@ -127,6 +144,8 @@
 			children = (
 				761CA15B21011CB600411319 /* OnBoarding */,
 				761CA15A21011CB600411319 /* Products */,
+				9C5F0284D719F1AAE665C2D3 /* Pods */,
+				6CC4B34413C95D9502686F9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +210,32 @@
 			path = FindAccount;
 			sourceTree = "<group>";
 		};
+		76C4B351210646C4008D18B5 /* WantResetAccount */ = {
+			isa = PBXGroup;
+			children = (
+				76C4B353210646F1008D18B5 /* WantResetAccountViewController.swift */,
+			);
+			path = WantResetAccount;
+			sourceTree = "<group>";
+		};
+		76C4B352210646D3008D18B5 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				76C4B351210646C4008D18B5 /* WantResetAccount */,
+				76C4B34E210635C8008D18B5 /* FindAccount */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		9C5F0284D719F1AAE665C2D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA4AE3DF5859D46B7F5A3DF5 /* Pods-OnBoarding.debug.xcconfig */,
+				890C2BA5F716A6891325ADBD /* Pods-OnBoarding.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,6 +243,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 761CA16B21011CBB00411319 /* Build configuration list for PBXNativeTarget "OnBoarding" */;
 			buildPhases = (
+				76870EF4A14624C452E37808 /* [CP] Check Pods Manifest.lock */,
 				761CA15521011CB600411319 /* Sources */,
 				761CA15621011CB600411319 /* Frameworks */,
 				761CA15721011CB600411319 /* Resources */,
@@ -259,6 +305,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76870EF4A14624C452E37808 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnBoarding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		761CA15521011CB600411319 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -266,6 +333,7 @@
 			files = (
 				768D78B62102EB8400D19CC6 /* LoginViewController.swift in Sources */,
 				768D78B32102E3DB00D19CC6 /* SyncContactsViewController.swift in Sources */,
+				76C4B354210646F1008D18B5 /* WantResetAccountViewController.swift in Sources */,
 				761B544E21014059007AE5CD /* CreateAccountViewController.swift in Sources */,
 				768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */,
 				761B5446210123F9007AE5CD /* GetStartedViewController.swift in Sources */,
@@ -434,6 +502,7 @@
 		};
 		761CA16C21011CBB00411319 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA4AE3DF5859D46B7F5A3DF5 /* Pods-OnBoarding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +521,7 @@
 		};
 		761CA16D21011CBB00411319 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 890C2BA5F716A6891325ADBD /* Pods-OnBoarding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

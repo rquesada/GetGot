@@ -22,7 +22,6 @@ class GetStartedViewController: UIViewController {
     }
 
     @IBAction func loginHandler(_ sender: Any) {
-        debugPrint("Show Login")
         //Show GetStarted
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "loginID") as! LoginViewController

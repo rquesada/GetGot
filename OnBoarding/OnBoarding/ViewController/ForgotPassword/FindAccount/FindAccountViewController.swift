@@ -73,6 +73,8 @@ class FindAccountViewController: UIViewController {
             self.showError(isError:true)
         }else if self.usernameTextField.text == ""{
             self.showMoreInfoError(isError: true)
+        }else{
+            self.performSegue(withIdentifier: "wantResetSegue", sender: nil)
         }
     }
     
