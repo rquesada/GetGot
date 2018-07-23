@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
         self.loginButton.isEnabled = false
         
         self.forgotPasswordButton = UIBarButtonItem(title: "Forgot pasword?", style: UIBarButtonItemStyle.plain, target: self, action:
-            #selector(revealPasswordHandler))
+            #selector(forgotHandler))
         self.flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
         let frame = CGRect(x: 0.0, y: 0.0, width: 375, height: 50)
@@ -59,11 +59,15 @@ class LoginViewController: UIViewController {
     }
     
     @objc func loginHandler(){
-        debugPrint("Login")
+        if self.usernameTextField.text == "12345678"{
+            self.showLoginError()
+        }else{
+            debugPrint("Go to Main page")
+        }
     }
     
     @objc func forgotHandler(){
-        debugPrint("Forgot Password")
+        self.performSegue(withIdentifier: "findAccountSegue", sender: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +81,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func revealPasswordHandler(_ sender: Any) {
         self.passwordTextField.isSecureTextEntry = !self.passwordTextField.isSecureTextEntry
-        
+    }
+    
+    func showLoginError(){
+        let message  = "We found more than one account with that phone number. Please try again with your username or email."
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
