@@ -13,9 +13,62 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var showPasswordButton: UIButton!
+    
+    var loginButton: UIBarButtonItem!
+    var flexibleSpace: UIBarButtonItem!
+    var forgotPasswordButton: UIBarButtonItem!
+    var toolbar: UIToolbar!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let customButton = UIButton()
+        customButton.frame = CGRect(x:0, y:0, width:60, height:25)
+        customButton.setTitle("Log in", for: .normal)
+        customButton.backgroundColor = UIUtils.GlobalConstants.MainColor
+        customButton.layer.cornerRadius = 18.0
+        customButton.setTitleColor(UIUtils.GlobalConstants.DisableColor, for: UIControlState.disabled)
+        customButton.setTitleColor(UIUtils.GlobalConstants.MainFontColor, for: UIControlState.normal)
+        customButton.addTarget(self, action: #selector(loginHandler), for: .touchUpInside)
+        self.loginButton = UIBarButtonItem(customView: customButton)
+        self.loginButton.isEnabled = false
+        
+        self.forgotPasswordButton = UIBarButtonItem(title: "Forgot pasword?", style: UIBarButtonItemStyle.plain, target: self, action:
+            #selector(forgotHandler))
+        self.flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        
+        let frame = CGRect(x: 0.0, y: 0.0, width: 375, height: 50)
+        self.toolbar = UIToolbar(frame: frame)
+        self.toolbar.barStyle = UIBarStyle.default
+        self.toolbar.items = [self.forgotPasswordButton, self.flexibleSpace, self.loginButton]
+        self.toolbar.sizeToFit()
+        self.usernameTextField.inputAccessoryView = toolbar
+        self.passwordTextField.inputAccessoryView = toolbar
+        
+        self.usernameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if self.passwordTextField.text != "" && self.usernameTextField.text != ""{
+            self.loginButton.isEnabled = true
+        }else{
+            self.loginButton.isEnabled = false
+        }
+    }
+    
+    @objc func loginHandler(){
+        debugPrint("Login")
+    }
+    
+    @objc func forgotHandler(){
+        debugPrint("Forgot Password")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.usernameTextField.becomeFirstResponder()
     }
 
     @IBAction func backHandler(_ sender: Any) {
