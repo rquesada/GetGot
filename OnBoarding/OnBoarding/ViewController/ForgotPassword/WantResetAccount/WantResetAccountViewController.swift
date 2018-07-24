@@ -33,6 +33,11 @@ class WantResetAccountViewController: UIViewController {
     }
     
     @IBAction func continueHandler(_ sender: Any) {
+        if self.option1Switch.isOn{
+            self.performSegue(withIdentifier: "checkPhoneSegue", sender: nil)
+        }else{
+            debugPrint("I don't know")
+        }
     }
     
     @objc func backHandler(){
@@ -56,5 +61,4 @@ class WantResetAccountViewController: UIViewController {
             webVC.openURL = URL(string: "https://help.twitter.com/forms/signin")  
         }
     }
-
 }

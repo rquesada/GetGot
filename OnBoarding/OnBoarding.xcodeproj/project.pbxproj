@@ -17,6 +17,7 @@
 		761CA16221011CB600411319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761CA16021011CB600411319 /* Main.storyboard */; };
 		761CA16421011CBB00411319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761CA16321011CBB00411319 /* Assets.xcassets */; };
 		761CA16721011CBB00411319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761CA16521011CBB00411319 /* LaunchScreen.storyboard */; };
+		76771B57210670BC0036B689 /* CheckYourPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76771B56210670BC0036B689 /* CheckYourPhoneViewController.swift */; };
 		768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */; };
 		768D78A72102983800D19CC6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A62102983800D19CC6 /* WebViewController.swift */; };
 		768D78AC2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78AB2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift */; };
@@ -25,6 +26,7 @@
 		768D78B32102E3DB00D19CC6 /* SyncContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78B22102E3DB00D19CC6 /* SyncContactsViewController.swift */; };
 		768D78B62102EB8400D19CC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78B52102EB8400D19CC6 /* LoginViewController.swift */; };
 		768D78B92102EF6200D19CC6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768D78B72102EF6200D19CC6 /* Login.storyboard */; };
+		76A0AE2D2107905C0062CE02 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AE2C2107905C0062CE02 /* ResetPasswordViewController.swift */; };
 		76C4B350210635EF008D18B5 /* FindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4B34F210635EF008D18B5 /* FindAccountViewController.swift */; };
 		76C4B354210646F1008D18B5 /* WantResetAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4B353210646F1008D18B5 /* WantResetAccountViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,7 @@
 		761CA16621011CBB00411319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		761CA16821011CBB00411319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7662447321066107000EEA25 /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76771B56210670BC0036B689 /* CheckYourPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckYourPhoneViewController.swift; sourceTree = "<group>"; };
 		768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountStep2ViewController.swift; sourceTree = "<group>"; };
 		768D78A62102983800D19CC6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		768D78AB2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyOptionsTableViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		768D78B22102E3DB00D19CC6 /* SyncContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsViewController.swift; sourceTree = "<group>"; };
 		768D78B52102EB8400D19CC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		768D78B82102EF6200D19CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		76A0AE2C2107905C0062CE02 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		76C4B34F210635EF008D18B5 /* FindAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAccountViewController.swift; sourceTree = "<group>"; };
 		76C4B353210646F1008D18B5 /* WantResetAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantResetAccountViewController.swift; sourceTree = "<group>"; };
 		890C2BA5F716A6891325ADBD /* Pods-OnBoarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBoarding.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnBoarding/Pods-OnBoarding.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +174,14 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
+		76771B552106709E0036B689 /* CheckYourPhone */ = {
+			isa = PBXGroup;
+			children = (
+				76771B56210670BC0036B689 /* CheckYourPhoneViewController.swift */,
+			);
+			path = CheckYourPhone;
+			sourceTree = "<group>";
+		};
 		768D78A52102981E00D19CC6 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +214,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		76A0AE2B210790430062CE02 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				76A0AE2C2107905C0062CE02 /* ResetPasswordViewController.swift */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
 		76C4B34E210635C8008D18B5 /* FindAccount */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +241,8 @@
 		76C4B352210646D3008D18B5 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
+				76A0AE2B210790430062CE02 /* ResetPassword */,
+				76771B552106709E0036B689 /* CheckYourPhone */,
 				76C4B351210646C4008D18B5 /* WantResetAccount */,
 				76C4B34E210635C8008D18B5 /* FindAccount */,
 			);
@@ -334,11 +356,13 @@
 				768D78B62102EB8400D19CC6 /* LoginViewController.swift in Sources */,
 				768D78B32102E3DB00D19CC6 /* SyncContactsViewController.swift in Sources */,
 				76C4B354210646F1008D18B5 /* WantResetAccountViewController.swift in Sources */,
+				76A0AE2D2107905C0062CE02 /* ResetPasswordViewController.swift in Sources */,
 				761B544E21014059007AE5CD /* CreateAccountViewController.swift in Sources */,
 				768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */,
 				761B5446210123F9007AE5CD /* GetStartedViewController.swift in Sources */,
 				768D78AE2102B3FA00D19CC6 /* EnterCodeViewController.swift in Sources */,
 				768D78AC2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift in Sources */,
+				76771B57210670BC0036B689 /* CheckYourPhoneViewController.swift in Sources */,
 				761CA15F21011CB600411319 /* ViewController.swift in Sources */,
 				768D78A72102983800D19CC6 /* WebViewController.swift in Sources */,
 				761CA15D21011CB600411319 /* AppDelegate.swift in Sources */,
