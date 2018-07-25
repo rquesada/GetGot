@@ -19,6 +19,8 @@ class FindAccountViewController: UIViewController {
     var doneButton: UIBarButtonItem!
     var flexibleSpace: UIBarButtonItem!
     var toolbar: UIToolbar!
+    var upButtonItem: UIBarButtonItem!
+    var downButtonItem: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +43,30 @@ class FindAccountViewController: UIViewController {
         customButton.addTarget(self, action: #selector(doneHandler), for: .touchUpInside)
         self.doneButton = UIBarButtonItem(customView: customButton)
         
+        let upButton = UIButton()
+        upButton.frame = CGRect(x: 0, y: 0, width: 30, height: 25)
+        upButton.setTitle("▲", for: .normal)
+        upButton.setTitleColor(UIColor.lightGray, for: UIControlState.disabled)
+        upButton.setTitleColor(UIUtils.GlobalConstants.MainColor, for: UIControlState.normal)
+        upButton.addTarget(self, action: #selector(upHandler), for: .touchUpInside)
+        self.upButtonItem = UIBarButtonItem(customView: upButton)
+        self.upButtonItem.isEnabled = false
+        
+        let downButton = UIButton()
+        downButton.frame = CGRect(x: 0, y: 0, width: 30, height: 25)
+        downButton.setTitle("▼", for: .normal)
+        downButton.setTitleColor(UIColor.lightGray, for: UIControlState.disabled)
+        downButton.setTitleColor(UIUtils.GlobalConstants.MainColor, for: UIControlState.normal)
+        downButton.addTarget(self, action: #selector(downHandler), for: .touchUpInside)
+        self.downButtonItem = UIBarButtonItem(customView: downButton)
+        self.downButtonItem.isEnabled = false
+        
         self.flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
         let frame = CGRect(x: 0.0, y: 0.0, width: 375, height: 50)
         self.toolbar = UIToolbar(frame: frame)
         self.toolbar.barStyle = UIBarStyle.default
-        self.toolbar.items = [self.flexibleSpace, self.doneButton]
+        self.toolbar.items = [self.upButtonItem,self.downButtonItem ,self.flexibleSpace, self.doneButton]
         self.toolbar.sizeToFit()
         self.usernameTextField.inputAccessoryView = toolbar
         
@@ -56,6 +76,14 @@ class FindAccountViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.usernameTextField.becomeFirstResponder()
+    }
+    
+    @objc func upHandler(){
+        debugPrint("Up")
+    }
+    
+    @objc func downHandler(){
+        debugPrint("Down")
     }
     
     @objc func doneHandler(){

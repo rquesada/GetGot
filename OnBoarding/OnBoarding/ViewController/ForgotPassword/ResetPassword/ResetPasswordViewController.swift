@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResetPasswordViewController: UIViewController {
+class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var password1TextField: UITextField!
     @IBOutlet weak var password2TextField: UITextField!
@@ -20,6 +20,8 @@ class ResetPasswordViewController: UIViewController {
     var doneButton: UIBarButtonItem!
     var flexibleSpace: UIBarButtonItem!
     var toolbar: UIToolbar!
+    var upButtonItem: UIBarButtonItem!
+    var downButtonItem: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,18 +49,40 @@ class ResetPasswordViewController: UIViewController {
         customButton.addTarget(self, action: #selector(doneHandler), for: .touchUpInside)
         self.doneButton = UIBarButtonItem(customView: customButton)
         
+        let upButton = UIButton()
+        upButton.frame = CGRect(x: 0, y: 0, width: 30, height: 25)
+        upButton.setTitle("▲", for: .normal)
+        upButton.setTitleColor(UIColor.lightGray, for: UIControlState.disabled)
+        upButton.setTitleColor(UIUtils.GlobalConstants.MainColor, for: UIControlState.normal)
+        upButton.addTarget(self, action: #selector(upHandler), for: .touchUpInside)
+        self.upButtonItem = UIBarButtonItem(customView: upButton)
+        self.upButtonItem.isEnabled = false
+        
+        let downButton = UIButton()
+        downButton.frame = CGRect(x: 0, y: 0, width: 30, height: 25)
+        downButton.setTitle("▼", for: .normal)
+        downButton.setTitleColor(UIColor.lightGray, for: UIControlState.disabled)
+        downButton.setTitleColor(UIUtils.GlobalConstants.MainColor, for: UIControlState.normal)
+        downButton.addTarget(self, action: #selector(downHandler), for: .touchUpInside)
+        self.downButtonItem = UIBarButtonItem(customView: downButton)
+        self.downButtonItem.isEnabled = true
+        
         self.flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
         let frame = CGRect(x: 0.0, y: 0.0, width: 375, height: 50)
         self.toolbar = UIToolbar(frame: frame)
         self.toolbar.barStyle = UIBarStyle.default
-        self.toolbar.items = [self.flexibleSpace, self.doneButton]
+        self.toolbar.items = [self.upButtonItem,self.downButtonItem,self.flexibleSpace, self.doneButton]
         self.toolbar.sizeToFit()
         self.password1TextField.inputAccessoryView = toolbar
         self.password2TextField.inputAccessoryView = toolbar
         
         self.password1TextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         self.password2TextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.bordered, target: self, action: #selector(backHandler))
+        self.navigationItem.leftBarButtonItem = newBackButton
         
     }
     
@@ -67,7 +91,16 @@ class ResetPasswordViewController: UIViewController {
         self.password1TextField.becomeFirstResponder()
     }
     
+    @objc func backHandler(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @objc func textFieldDidChange(_ textField: UITextField) {
+        
+        self.showErrorL1(msg: "", isError: false)
+        self.showErrorL2(msg: "", isError: false)
+        
+        
         if textField == self.password1TextField{
             if let text = self.password1TextField.text{
                 if text.count < 6{
@@ -94,6 +127,17 @@ class ResetPasswordViewController: UIViewController {
         if (self.password1TextField.text != "") && (self.password1TextField.text != self.password2TextField.text){
             self.showErrorL2(msg: "Passwords do not match.", isError: true)
         }
+        
+        self.password1TextField.resignFirstResponder()
+        self.password2TextField.resignFirstResponder()
+    }
+    
+    @objc func upHandler(){
+        self.password1TextField.becomeFirstResponder()
+    }
+    
+    @objc func downHandler(){
+        self.password2TextField.becomeFirstResponder()
     }
     
     func showErrorL1(msg:String, isError:Bool){
@@ -111,8 +155,49 @@ class ResetPasswordViewController: UIViewController {
     }
    
     @IBAction func submitHandler(_ sender: Any) {
+        
+        
+        if let txtString = self.password1TextField.text{
+            
+            var haveError = false
+            if txtString == ""{
+                self.showErrorL1(msg: "Please, insert a new password.", isError: true)
+                haveError = true
+            }
+            
+            if txtString != ""{
+                if txtString.count < 6{
+                    self.showErrorL1(msg: "Too short", isError: true)
+                    haveError = true
+                }else if txtString.count >= 6 && txtString.count < 10{
+                    self.showErrorL1(msg: "Weak", isError: true)
+                }else{
+                    self.showErrorL1(msg: "Very strong", isError: false)
+                }
+            }
+            
+            if (txtString != "") && (txtString != self.password2TextField.text){
+                self.showErrorL2(msg: "Passwords do not match.", isError: true)
+                haveError = true
+            }
+            
+            if !haveError {
+                self.performSegue(withIdentifier: "congratsSegue", sender: nil)
+            }
+            
+        }
+        
+        
+        
     }
     
     @IBAction func rememberChange(_ sender: Any) {
+        debugPrint("Remember me")
+    }
+    
+    // MARK: - UITextFieldDelegate
+    @objc func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.downButtonItem.isEnabled = (textField == self.password1TextField) ? true : false
+        self.upButtonItem.isEnabled = (textField == self.password1TextField) ? false : true
     }
 }

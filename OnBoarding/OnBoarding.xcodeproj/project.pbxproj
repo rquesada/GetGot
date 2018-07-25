@@ -27,6 +27,7 @@
 		768D78B62102EB8400D19CC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78B52102EB8400D19CC6 /* LoginViewController.swift */; };
 		768D78B92102EF6200D19CC6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768D78B72102EF6200D19CC6 /* Login.storyboard */; };
 		76A0AE2D2107905C0062CE02 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AE2C2107905C0062CE02 /* ResetPasswordViewController.swift */; };
+		76A0AE302108CBBB0062CE02 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AE2F2108CBBB0062CE02 /* CongratsViewController.swift */; };
 		76C4B350210635EF008D18B5 /* FindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4B34F210635EF008D18B5 /* FindAccountViewController.swift */; };
 		76C4B354210646F1008D18B5 /* WantResetAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4B353210646F1008D18B5 /* WantResetAccountViewController.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		768D78B52102EB8400D19CC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		768D78B82102EF6200D19CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		76A0AE2C2107905C0062CE02 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		76A0AE2F2108CBBB0062CE02 /* CongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
 		76C4B34F210635EF008D18B5 /* FindAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAccountViewController.swift; sourceTree = "<group>"; };
 		76C4B353210646F1008D18B5 /* WantResetAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantResetAccountViewController.swift; sourceTree = "<group>"; };
 		890C2BA5F716A6891325ADBD /* Pods-OnBoarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBoarding.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnBoarding/Pods-OnBoarding.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +224,14 @@
 			path = ResetPassword;
 			sourceTree = "<group>";
 		};
+		76A0AE2E2108CB890062CE02 /* Congrats */ = {
+			isa = PBXGroup;
+			children = (
+				76A0AE2F2108CBBB0062CE02 /* CongratsViewController.swift */,
+			);
+			path = Congrats;
+			sourceTree = "<group>";
+		};
 		76C4B34E210635C8008D18B5 /* FindAccount */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +251,7 @@
 		76C4B352210646D3008D18B5 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
+				76A0AE2E2108CB890062CE02 /* Congrats */,
 				76A0AE2B210790430062CE02 /* ResetPassword */,
 				76771B552106709E0036B689 /* CheckYourPhone */,
 				76C4B351210646C4008D18B5 /* WantResetAccount */,
@@ -357,6 +368,7 @@
 				768D78B32102E3DB00D19CC6 /* SyncContactsViewController.swift in Sources */,
 				76C4B354210646F1008D18B5 /* WantResetAccountViewController.swift in Sources */,
 				76A0AE2D2107905C0062CE02 /* ResetPasswordViewController.swift in Sources */,
+				76A0AE302108CBBB0062CE02 /* CongratsViewController.swift in Sources */,
 				761B544E21014059007AE5CD /* CreateAccountViewController.swift in Sources */,
 				768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */,
 				761B5446210123F9007AE5CD /* GetStartedViewController.swift in Sources */,
