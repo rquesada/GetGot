@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WantResetAccountViewController: UIViewController {
+class WantResetAccountViewController: OBBaseViewController {
 
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var option1Switch: UISwitch!
@@ -18,7 +18,7 @@ class WantResetAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.continueButton.backgroundColor = UIUtils.GlobalConstants.MainColor
+        self.continueButton.backgroundColor = Config.GlobalConstants.MainColor
         self.continueButton.layer.cornerRadius = 24
         self.continueButton.layer.borderWidth = 2
         self.continueButton.layer.borderColor = UIColor.clear.cgColor

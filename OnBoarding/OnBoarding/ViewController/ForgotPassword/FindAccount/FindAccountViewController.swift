@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FindAccountViewController: UIViewController {
+class FindAccountViewController: OBBaseViewController {
     
     @IBOutlet weak var moreInfoLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,7 +24,7 @@ class FindAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.searchButton.backgroundColor = UIUtils.GlobalConstants.MainColor
+        self.searchButton.backgroundColor = Config.GlobalConstants.MainColor
         self.searchButton.layer.cornerRadius = 24
         self.searchButton.layer.borderWidth = 2
         self.searchButton.layer.borderColor = UIColor.clear.cgColor
@@ -36,10 +36,10 @@ class FindAccountViewController: UIViewController {
         let customButton = UIButton()
         customButton.frame = CGRect(x:0, y:0, width:60, height:25)
         customButton.setTitle("Done", for: .normal)
-        customButton.backgroundColor = UIUtils.GlobalConstants.MainColor
+        customButton.backgroundColor = Config.GlobalConstants.MainColor
         customButton.layer.cornerRadius = 18.0
-        customButton.setTitleColor(UIUtils.GlobalConstants.DisableColor, for: UIControlState.disabled)
-        customButton.setTitleColor(UIUtils.GlobalConstants.MainFontColor, for: UIControlState.normal)
+        customButton.setTitleColor(Config.GlobalConstants.DisableColor, for: UIControlState.disabled)
+        customButton.setTitleColor(Config.GlobalConstants.MainFontColor, for: UIControlState.normal)
         customButton.addTarget(self, action: #selector(doneHandler), for: .touchUpInside)
         self.doneButton = UIBarButtonItem(customView: customButton)
         
@@ -47,7 +47,7 @@ class FindAccountViewController: UIViewController {
         upButton.frame = CGRect(x: 0, y: 0, width: 30, height: 25)
         upButton.setTitle("▲", for: .normal)
         upButton.setTitleColor(UIColor.lightGray, for: UIControlState.disabled)
-        upButton.setTitleColor(UIUtils.GlobalConstants.MainColor, for: UIControlState.normal)
+        upButton.setTitleColor(Config.GlobalConstants.MainColor, for: UIControlState.normal)
         upButton.addTarget(self, action: #selector(upHandler), for: .touchUpInside)
         self.upButtonItem = UIBarButtonItem(customView: upButton)
         self.upButtonItem.isEnabled = false
@@ -56,7 +56,7 @@ class FindAccountViewController: UIViewController {
         downButton.frame = CGRect(x: 0, y: 0, width: 30, height: 25)
         downButton.setTitle("▼", for: .normal)
         downButton.setTitleColor(UIColor.lightGray, for: UIControlState.disabled)
-        downButton.setTitleColor(UIUtils.GlobalConstants.MainColor, for: UIControlState.normal)
+        downButton.setTitleColor(Config.GlobalConstants.MainColor, for: UIControlState.normal)
         downButton.addTarget(self, action: #selector(downHandler), for: .touchUpInside)
         self.downButtonItem = UIBarButtonItem(customView: downButton)
         self.downButtonItem.isEnabled = false

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -79,6 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="L98-Y7-KSf"/>
                     </view>
                     <connections>
+                        <outlet property="brandIcon" destination="hHm-SF-4pI" id="bH9-0W-z5H"/>
                         <outlet property="passwordTextField" destination="CuP-JQ-uXw" id="sYf-cg-S7J"/>
                         <outlet property="showPasswordButton" destination="Cz3-dZ-Eve" id="JSF-6d-mNK"/>
                         <outlet property="usernameTextField" destination="t55-QM-ebL" id="5p6-gP-MdZ"/>

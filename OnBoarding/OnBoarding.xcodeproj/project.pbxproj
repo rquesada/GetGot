@@ -17,6 +17,8 @@
 		761CA16221011CB600411319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761CA16021011CB600411319 /* Main.storyboard */; };
 		761CA16421011CBB00411319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761CA16321011CBB00411319 /* Assets.xcassets */; };
 		761CA16721011CBB00411319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761CA16521011CBB00411319 /* LaunchScreen.storyboard */; };
+		762D50082125C19100826B73 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762D50072125C19100826B73 /* Config.swift */; };
+		7646CE792125D61F0031587A /* OBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7646CE782125D61F0031587A /* OBBaseViewController.swift */; };
 		76771B57210670BC0036B689 /* CheckYourPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76771B56210670BC0036B689 /* CheckYourPhoneViewController.swift */; };
 		768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */; };
 		768D78A72102983800D19CC6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A62102983800D19CC6 /* WebViewController.swift */; };
@@ -44,6 +46,8 @@
 		761CA16321011CBB00411319 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		761CA16621011CBB00411319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		761CA16821011CBB00411319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		762D50072125C19100826B73 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		7646CE782125D61F0031587A /* OBBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBBaseViewController.swift; sourceTree = "<group>"; };
 		7662447321066107000EEA25 /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76771B56210670BC0036B689 /* CheckYourPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckYourPhoneViewController.swift; sourceTree = "<group>"; };
 		768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountStep2ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 		761B543C2101229E007AE5CD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7646CE752125D4F50031587A /* Base */,
 				76C4B352210646D3008D18B5 /* ForgotPassword */,
 				768D78B42102EB7400D19CC6 /* Login */,
 				768D78B12102E3C400D19CC6 /* SyncContacts */,
@@ -130,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				761B544A2101301C007AE5CD /* UIUtils.swift */,
+				762D50072125C19100826B73 /* Config.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -174,6 +180,14 @@
 				761CA16821011CBB00411319 /* Info.plist */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		7646CE752125D4F50031587A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7646CE782125D61F0031587A /* OBBaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		76771B552106709E0036B689 /* CheckYourPhone */ = {
@@ -365,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				768D78B62102EB8400D19CC6 /* LoginViewController.swift in Sources */,
+				7646CE792125D61F0031587A /* OBBaseViewController.swift in Sources */,
 				768D78B32102E3DB00D19CC6 /* SyncContactsViewController.swift in Sources */,
 				76C4B354210646F1008D18B5 /* WantResetAccountViewController.swift in Sources */,
 				76A0AE2D2107905C0062CE02 /* ResetPasswordViewController.swift in Sources */,
@@ -375,6 +390,7 @@
 				768D78AE2102B3FA00D19CC6 /* EnterCodeViewController.swift in Sources */,
 				768D78AC2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift in Sources */,
 				76771B57210670BC0036B689 /* CheckYourPhoneViewController.swift in Sources */,
+				762D50082125C19100826B73 /* Config.swift in Sources */,
 				761CA15F21011CB600411319 /* ViewController.swift in Sources */,
 				768D78A72102983800D19CC6 /* WebViewController.swift in Sources */,
 				761CA15D21011CB600411319 /* AppDelegate.swift in Sources */,

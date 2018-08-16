@@ -8,17 +8,18 @@
 
 import UIKit
 
-class SyncContactsViewController: UIViewController, UITextViewDelegate {
+class SyncContactsViewController: OBBaseViewController, UITextViewDelegate {
 
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var syncContactsButton: UIButton!
+    @IBOutlet weak var brandIcon: UIImageView!
     
     var openURL:URL!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.syncContactsButton.backgroundColor = UIUtils.GlobalConstants.MainColor
+        self.brandIcon.image =  Config.sharedInstance.appIcon
+        self.syncContactsButton.backgroundColor = Config.GlobalConstants.MainColor
         self.syncContactsButton.layer.cornerRadius = 24
         self.syncContactsButton.layer.borderWidth = 2
         self.syncContactsButton.layer.borderColor = UIColor.clear.cgColor

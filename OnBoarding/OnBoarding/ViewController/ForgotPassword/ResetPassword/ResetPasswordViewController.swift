@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
+class ResetPasswordViewController: OBBaseViewController, UITextFieldDelegate {
 
     @IBOutlet weak var password1TextField: UITextField!
     @IBOutlet weak var password2TextField: UITextField!
@@ -26,7 +26,7 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.submitButton.backgroundColor = UIUtils.GlobalConstants.MainColor
+        self.submitButton.backgroundColor = Config.GlobalConstants.MainColor
         self.submitButton.layer.cornerRadius = 24
         self.submitButton.layer.borderWidth = 2
         self.submitButton.layer.borderColor = UIColor.clear.cgColor
@@ -42,10 +42,10 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
         let customButton = UIButton()
         customButton.frame = CGRect(x:0, y:0, width:60, height:25)
         customButton.setTitle("Done", for: .normal)
-        customButton.backgroundColor = UIUtils.GlobalConstants.MainColor
+        customButton.backgroundColor = Config.GlobalConstants.MainColor
         customButton.layer.cornerRadius = 18.0
-        customButton.setTitleColor(UIUtils.GlobalConstants.DisableColor, for: UIControlState.disabled)
-        customButton.setTitleColor(UIUtils.GlobalConstants.MainFontColor, for: UIControlState.normal)
+        customButton.setTitleColor(Config.GlobalConstants.DisableColor, for: UIControlState.disabled)
+        customButton.setTitleColor(Config.GlobalConstants.MainFontColor, for: UIControlState.normal)
         customButton.addTarget(self, action: #selector(doneHandler), for: .touchUpInside)
         self.doneButton = UIBarButtonItem(customView: customButton)
         
@@ -53,7 +53,7 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
         upButton.frame = CGRect(x: 0, y: 0, width: 30, height: 25)
         upButton.setTitle("▲", for: .normal)
         upButton.setTitleColor(UIColor.lightGray, for: UIControlState.disabled)
-        upButton.setTitleColor(UIUtils.GlobalConstants.MainColor, for: UIControlState.normal)
+        upButton.setTitleColor(Config.GlobalConstants.MainColor, for: UIControlState.normal)
         upButton.addTarget(self, action: #selector(upHandler), for: .touchUpInside)
         self.upButtonItem = UIBarButtonItem(customView: upButton)
         self.upButtonItem.isEnabled = false
@@ -62,7 +62,7 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
         downButton.frame = CGRect(x: 0, y: 0, width: 30, height: 25)
         downButton.setTitle("▼", for: .normal)
         downButton.setTitleColor(UIColor.lightGray, for: UIControlState.disabled)
-        downButton.setTitleColor(UIUtils.GlobalConstants.MainColor, for: UIControlState.normal)
+        downButton.setTitleColor(Config.GlobalConstants.MainColor, for: UIControlState.normal)
         downButton.addTarget(self, action: #selector(downHandler), for: .touchUpInside)
         self.downButtonItem = UIBarButtonItem(customView: downButton)
         self.downButtonItem.isEnabled = true

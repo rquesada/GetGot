@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WebViewController: UIViewController {
+class WebViewController: OBBaseViewController {
     
     var openURL:URL!
 

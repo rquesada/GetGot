@@ -8,13 +8,13 @@
 
 import UIKit
 
-class CongratsViewController: UIViewController {
+class CongratsViewController: OBBaseViewController {
 
     @IBOutlet weak var continueButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.continueButton.backgroundColor = UIUtils.GlobalConstants.MainColor
+        self.continueButton.backgroundColor = Config.GlobalConstants.MainColor
         self.continueButton.layer.cornerRadius = 24
         self.continueButton.layer.borderWidth = 2
         self.continueButton.layer.borderColor = UIColor.clear.cgColor
