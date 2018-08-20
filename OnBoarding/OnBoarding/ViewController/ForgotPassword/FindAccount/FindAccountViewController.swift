@@ -14,7 +14,7 @@ class FindAccountViewController: OBBaseViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var searchButton: ConfirmButton!
     
     var doneButton: UIBarButtonItem!
     var flexibleSpace: UIBarButtonItem!
@@ -24,10 +24,6 @@ class FindAccountViewController: OBBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.searchButton.backgroundColor = Config.GlobalConstants.MainColor
-        self.searchButton.layer.cornerRadius = 24
-        self.searchButton.layer.borderWidth = 2
-        self.searchButton.layer.borderColor = UIColor.clear.cgColor
         
         self.usernameTextField.layer.borderWidth = 0.5
         self.usernameTextField.layer.cornerRadius = 5

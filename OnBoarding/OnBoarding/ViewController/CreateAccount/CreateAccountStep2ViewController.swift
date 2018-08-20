@@ -12,7 +12,7 @@ class CreateAccountStep2ViewController: OBBaseViewController, UITextViewDelegate
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var privacyPoliceTextView: UITextView!
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var signUpButton: ConfirmButton!
     @IBOutlet weak var brandIcon: UIImageView!
     
     var isUsingPhone:Bool!
@@ -23,10 +23,6 @@ class CreateAccountStep2ViewController: OBBaseViewController, UITextViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         self.brandIcon.image = Config.sharedInstance.appIcon
-        self.signUpButton.backgroundColor = Config.GlobalConstants.MainColor
-        self.signUpButton.layer.cornerRadius = 24
-        self.signUpButton.layer.borderWidth = 2
-        self.signUpButton.layer.borderColor = UIColor.clear.cgColor
     }
     
     override func viewWillAppear(_ animated: Bool) {

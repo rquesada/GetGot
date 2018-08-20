@@ -13,7 +13,7 @@ class ResetPasswordViewController: OBBaseViewController, UITextFieldDelegate {
     @IBOutlet weak var password1TextField: UITextField!
     @IBOutlet weak var password2TextField: UITextField!
     @IBOutlet weak var rememberSwitch: UISwitch!
-    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var submitButton: ConfirmButton!
     @IBOutlet weak var error1Label: UILabel!
     @IBOutlet weak var error2Label: UILabel!
     
@@ -25,12 +25,7 @@ class ResetPasswordViewController: OBBaseViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.submitButton.backgroundColor = Config.GlobalConstants.MainColor
-        self.submitButton.layer.cornerRadius = 24
-        self.submitButton.layer.borderWidth = 2
-        self.submitButton.layer.borderColor = UIColor.clear.cgColor
-        
+ 
         self.password1TextField.layer.borderWidth = 0.5
         self.password1TextField.layer.cornerRadius = 5
         self.password1TextField.layer.borderColor = UIColor.lightGray.cgColor

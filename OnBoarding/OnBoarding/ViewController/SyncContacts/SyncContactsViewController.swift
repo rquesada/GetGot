@@ -11,7 +11,7 @@ import UIKit
 class SyncContactsViewController: OBBaseViewController, UITextViewDelegate {
 
     @IBOutlet weak var descriptionTextView: UITextView!
-    @IBOutlet weak var syncContactsButton: UIButton!
+    @IBOutlet weak var syncContactsButton: ConfirmButton!
     @IBOutlet weak var brandIcon: UIImageView!
     
     var openURL:URL!
@@ -19,10 +19,6 @@ class SyncContactsViewController: OBBaseViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.brandIcon.image =  Config.sharedInstance.appIcon
-        self.syncContactsButton.backgroundColor = Config.GlobalConstants.MainColor
-        self.syncContactsButton.layer.cornerRadius = 24
-        self.syncContactsButton.layer.borderWidth = 2
-        self.syncContactsButton.layer.borderColor = UIColor.clear.cgColor
         
         let attributedString = NSMutableAttributedString(string:"Contacts from your address book will be uploaded to Twitter on an ongoing basis. You can turn off syncing and remove previously uploaded contacts in your settings. Learn More")
         _ = attributedString.setAsLink(textToFind: "Learn More", linkURL: "https://help.twitter.com/en/using-twitter/upload-your-contacts-to-search-for-friends")

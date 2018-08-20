@@ -11,7 +11,7 @@ import UIKit
 class CheckYourPhoneViewController: OBBaseViewController {
 
     @IBOutlet weak var codeTextField: UITextField!
-    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var submitButton: ConfirmButton!
     @IBOutlet weak var errorLabel: UILabel!
     
     var doneButton: UIBarButtonItem!
@@ -22,11 +22,6 @@ class CheckYourPhoneViewController: OBBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.submitButton.backgroundColor = Config.GlobalConstants.MainColor
-        self.submitButton.layer.cornerRadius = 24
-        self.submitButton.layer.borderWidth = 2
-        self.submitButton.layer.borderColor = UIColor.clear.cgColor
         
         self.codeTextField.layer.borderWidth = 0.5
         self.codeTextField.layer.cornerRadius = 5
