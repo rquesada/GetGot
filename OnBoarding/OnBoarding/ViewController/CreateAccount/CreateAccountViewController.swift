@@ -28,16 +28,7 @@ class CreateAccountViewController: OBBaseViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.brandIcon.image = Config.sharedInstance.appIcon
-
-        let customButton = UIButton()
-        customButton.frame = CGRect(x:0, y:0, width:60, height:25)
-        customButton.setTitle("Next", for: .normal)
-        customButton.backgroundColor = Config.GlobalConstants.MainColor
-        customButton.layer.cornerRadius = 18.0
-        customButton.setTitleColor(Config.GlobalConstants.DisableColor, for: UIControlState.disabled)
-        customButton.setTitleColor(Config.GlobalConstants.MainFontColor, for: UIControlState.normal)
-        customButton.addTarget(self, action: #selector(nextHandler), for: .touchUpInside)
-        self.nextButton = UIBarButtonItem(customView: customButton)
+        self.nextButton = BaseButton.customNextButton(target: self, action: #selector(CreateAccountViewController.nextHandler))
         self.nextButton.isEnabled = false
         
         self.switchButton = UIBarButtonItem(title: "Use email instead", style: UIBarButtonItemStyle.plain, target: self, action:

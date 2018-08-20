@@ -17,6 +17,18 @@ class BaseButton: UIButton {
         // Drawing code
     }
     */
+    
+    static func customNextButton( target: Any?, action: Selector) -> UIBarButtonItem{
+        let baseButton = BaseButton()
+        baseButton.frame = CGRect(x:0, y:0, width:60, height:25)
+        baseButton.setTitle("Next", for: .normal)
+        baseButton.backgroundColor = Config.GlobalConstants.MainColor
+        baseButton.layer.cornerRadius = 18.0
+        baseButton.setTitleColor(Config.GlobalConstants.DisableColor, for: UIControlState.disabled)
+        baseButton.setTitleColor(Config.GlobalConstants.MainFontColor, for: UIControlState.normal)
+        baseButton.addTarget(target, action: action, for: .touchUpInside)
+        return UIBarButtonItem(customView: baseButton)
+    }
 
 }
 
