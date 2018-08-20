@@ -11,15 +11,15 @@ import UIKit
 class GetStartedViewController: OBBaseViewController {
 
     @IBOutlet weak var brandIcon: UIImageView!
-    @IBOutlet weak var getStartedButton: UIButton!
+    @IBOutlet weak var getStartedButton: ConfirmButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.getStartedButton.backgroundColor = Config.GlobalConstants.MainColor
-        self.getStartedButton.layer.cornerRadius = 24
-        self.getStartedButton.layer.borderWidth = 2
-        self.getStartedButton.layer.borderColor = UIColor.clear.cgColor
+//        self.getStartedButton.backgroundColor = Config.GlobalConstants.MainColor
+//        self.getStartedButton.layer.cornerRadius = 24
+//        self.getStartedButton.layer.borderWidth = 2
+//        self.getStartedButton.layer.borderColor = UIColor.clear.cgColor
         
         self.brandIcon.image  = Config.sharedInstance.appIcon
     }

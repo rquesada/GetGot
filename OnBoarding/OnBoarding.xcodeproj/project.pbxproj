@@ -28,6 +28,7 @@
 		768D78B32102E3DB00D19CC6 /* SyncContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78B22102E3DB00D19CC6 /* SyncContactsViewController.swift */; };
 		768D78B62102EB8400D19CC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78B52102EB8400D19CC6 /* LoginViewController.swift */; };
 		768D78B92102EF6200D19CC6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768D78B72102EF6200D19CC6 /* Login.storyboard */; };
+		76984156212B08E200215975 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76984155212B08E200215975 /* BaseButton.swift */; };
 		76A0AE2D2107905C0062CE02 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AE2C2107905C0062CE02 /* ResetPasswordViewController.swift */; };
 		76A0AE302108CBBB0062CE02 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AE2F2108CBBB0062CE02 /* CongratsViewController.swift */; };
 		76C4B350210635EF008D18B5 /* FindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4B34F210635EF008D18B5 /* FindAccountViewController.swift */; };
@@ -58,6 +59,7 @@
 		768D78B22102E3DB00D19CC6 /* SyncContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsViewController.swift; sourceTree = "<group>"; };
 		768D78B52102EB8400D19CC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		768D78B82102EF6200D19CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		76984155212B08E200215975 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		76A0AE2C2107905C0062CE02 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		76A0AE2F2108CBBB0062CE02 /* CongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
 		76C4B34F210635EF008D18B5 /* FindAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAccountViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				7646CE782125D61F0031587A /* OBBaseViewController.swift */,
+				76984155212B08E200215975 /* BaseButton.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				76C4B354210646F1008D18B5 /* WantResetAccountViewController.swift in Sources */,
 				76A0AE2D2107905C0062CE02 /* ResetPasswordViewController.swift in Sources */,
 				76A0AE302108CBBB0062CE02 /* CongratsViewController.swift in Sources */,
+				76984156212B08E200215975 /* BaseButton.swift in Sources */,
 				761B544E21014059007AE5CD /* CreateAccountViewController.swift in Sources */,
 				768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */,
 				761B5446210123F9007AE5CD /* GetStartedViewController.swift in Sources */,
