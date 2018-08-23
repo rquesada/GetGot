@@ -8,11 +8,12 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: OBBaseViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var showPasswordButton: UIButton!
+    @IBOutlet weak var brandIcon: UIImageView!
     
     var loginButton: UIBarButtonItem!
     var flexibleSpace: UIBarButtonItem!
@@ -22,14 +23,14 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.brandIcon.image = Config.sharedInstance.appIcon
         let customButton = UIButton()
         customButton.frame = CGRect(x:0, y:0, width:60, height:25)
         customButton.setTitle("Log in", for: .normal)
-        customButton.backgroundColor = UIUtils.GlobalConstants.MainColor
+        customButton.backgroundColor = Config.GlobalConstants.MainColor
         customButton.layer.cornerRadius = 18.0
-        customButton.setTitleColor(UIUtils.GlobalConstants.DisableColor, for: UIControlState.disabled)
-        customButton.setTitleColor(UIUtils.GlobalConstants.MainFontColor, for: UIControlState.normal)
+        customButton.setTitleColor(Config.GlobalConstants.DisableColor, for: UIControlState.disabled)
+        customButton.setTitleColor(Config.GlobalConstants.MainFontColor, for: UIControlState.normal)
         customButton.addTarget(self, action: #selector(loginHandler), for: .touchUpInside)
         self.loginButton = UIBarButtonItem(customView: customButton)
         self.loginButton.isEnabled = false

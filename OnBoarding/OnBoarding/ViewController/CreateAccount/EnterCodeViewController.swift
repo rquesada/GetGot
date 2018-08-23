@@ -8,9 +8,10 @@
 
 import UIKit
 
-class EnterCodeViewController: UIViewController, UITextFieldDelegate {
+class EnterCodeViewController: OBBaseViewController, UITextFieldDelegate {
 
     @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var brandIcon: UIImageView!
     @IBOutlet weak var codeTextField: UITextField!
     
     var toolbar: UIToolbar!
@@ -19,15 +20,9 @@ class EnterCodeViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let customButton = UIButton()
-        customButton.frame = CGRect(x:0, y:0, width:60, height:25)
-        customButton.setTitle("Next", for: .normal)
-        customButton.backgroundColor = UIUtils.GlobalConstants.MainColor
-        customButton.layer.cornerRadius = 18.0
-        customButton.setTitleColor(UIUtils.GlobalConstants.DisableColor, for: UIControlState.disabled)
-        customButton.setTitleColor(UIUtils.GlobalConstants.MainFontColor, for: UIControlState.normal)
-        customButton.addTarget(self, action: #selector(nextHandler), for: .touchUpInside)
-        self.nextButton = UIBarButtonItem(customView: customButton)
+        self.brandIcon.image = Config.sharedInstance.appIcon
+        
+        self.nextButton = BaseButton.customNextButton(target: self, action: #selector(nextHandler))
         self.nextButton.isEnabled = false
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         let frame = CGRect(x: 0.0, y: 0.0, width: 375, height: 50)
@@ -64,7 +59,7 @@ class EnterCodeViewController: UIViewController, UITextFieldDelegate {
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func didReceiveHandler(_ sender: Any) {
+    @IBAction func didReceiveHandler(_ sender: UIBarButtonItem) {
         let optionMenu = UIAlertController(title: nil, message: "Didn't receive SMS?", preferredStyle: .actionSheet)
         let deleteAction = UIAlertAction(title: "Resend SMS", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
@@ -85,6 +80,12 @@ class EnterCodeViewController: UIViewController, UITextFieldDelegate {
         optionMenu.addAction(deleteAction)
         optionMenu.addAction(saveAction)
         optionMenu.addAction(cancelAction)
+        
+        if let popoverController = optionMenu.popoverPresentationController{
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
         self.present(optionMenu, animated: true, completion: nil)
     }
     

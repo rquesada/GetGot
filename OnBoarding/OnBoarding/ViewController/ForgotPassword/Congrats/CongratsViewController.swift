@@ -8,17 +8,12 @@
 
 import UIKit
 
-class CongratsViewController: UIViewController {
+class CongratsViewController: OBBaseViewController {
 
-    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var continueButton: ConfirmButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.continueButton.backgroundColor = UIUtils.GlobalConstants.MainColor
-        self.continueButton.layer.cornerRadius = 24
-        self.continueButton.layer.borderWidth = 2
-        self.continueButton.layer.borderColor = UIColor.clear.cgColor
-        
         self.navigationItem.hidesBackButton = true
         let newBackButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.bordered, target: self, action: #selector(backHandler))
         self.navigationItem.leftBarButtonItem = newBackButton
