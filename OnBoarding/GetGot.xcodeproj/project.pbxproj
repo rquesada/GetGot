@@ -19,6 +19,7 @@
 		762D50082125C19100826B73 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762D50072125C19100826B73 /* Config.swift */; };
 		7646CE792125D61F0031587A /* OBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7646CE782125D61F0031587A /* OBBaseViewController.swift */; };
 		76771B57210670BC0036B689 /* CheckYourPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76771B56210670BC0036B689 /* CheckYourPhoneViewController.swift */; };
+		767E8AD1212F91340045200E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 761CA16821011CBB00411319 /* Info.plist */; };
 		768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */; };
 		768D78A72102983800D19CC6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A62102983800D19CC6 /* WebViewController.swift */; };
 		768D78AC2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78AB2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift */; };
@@ -39,13 +40,13 @@
 		761B5445210123F9007AE5CD /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		761B544A2101301C007AE5CD /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		761B544D21014059007AE5CD /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		761CA15921011CB600411319 /* OnBoarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnBoarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		761CA15921011CB600411319 /* GetGot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetGot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		761CA15C21011CB600411319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		761CA15E21011CB600411319 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		761CA16121011CB600411319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		761CA16321011CBB00411319 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		761CA16621011CBB00411319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		761CA16821011CBB00411319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		761CA16821011CBB00411319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = GetGot/Info.plist; sourceTree = SOURCE_ROOT; };
 		762D50072125C19100826B73 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		7646CE782125D61F0031587A /* OBBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBBaseViewController.swift; sourceTree = "<group>"; };
 		7662447321066107000EEA25 /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,7 +153,7 @@
 		761CA15021011CB600411319 = {
 			isa = PBXGroup;
 			children = (
-				761CA15B21011CB600411319 /* OnBoarding */,
+				761CA15B21011CB600411319 /* GetGot */,
 				761CA15A21011CB600411319 /* Products */,
 				6CC4B34413C95D9502686F9D /* Frameworks */,
 			);
@@ -161,12 +162,12 @@
 		761CA15A21011CB600411319 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				761CA15921011CB600411319 /* OnBoarding.app */,
+				761CA15921011CB600411319 /* GetGot.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		761CA15B21011CB600411319 /* OnBoarding */ = {
+		761CA15B21011CB600411319 /* GetGot */ = {
 			isa = PBXGroup;
 			children = (
 				761B544921012FF9007AE5CD /* Utils */,
@@ -176,7 +177,7 @@
 				761CA16321011CBB00411319 /* Assets.xcassets */,
 				761CA16821011CBB00411319 /* Info.plist */,
 			);
-			path = OnBoarding;
+			path = GetGot;
 			sourceTree = "<group>";
 		};
 		7646CE752125D4F50031587A /* Base */ = {
@@ -275,9 +276,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		761CA15821011CB600411319 /* OnBoarding */ = {
+		761CA15821011CB600411319 /* GetGot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 761CA16B21011CBB00411319 /* Build configuration list for PBXNativeTarget "OnBoarding" */;
+			buildConfigurationList = 761CA16B21011CBB00411319 /* Build configuration list for PBXNativeTarget "GetGot" */;
 			buildPhases = (
 				761CA15521011CB600411319 /* Sources */,
 				761CA15621011CB600411319 /* Frameworks */,
@@ -287,9 +288,9 @@
 			);
 			dependencies = (
 			);
-			name = OnBoarding;
+			name = GetGot;
 			productName = OnBoarding;
-			productReference = 761CA15921011CB600411319 /* OnBoarding.app */;
+			productReference = 761CA15921011CB600411319 /* GetGot.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -307,7 +308,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 761CA15421011CB600411319 /* Build configuration list for PBXProject "OnBoarding" */;
+			buildConfigurationList = 761CA15421011CB600411319 /* Build configuration list for PBXProject "GetGot" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -320,7 +321,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				761CA15821011CB600411319 /* OnBoarding */,
+				761CA15821011CB600411319 /* GetGot */,
 			);
 		};
 /* End PBXProject section */
@@ -332,6 +333,7 @@
 			files = (
 				761CA16721011CBB00411319 /* LaunchScreen.storyboard in Resources */,
 				761CA16421011CBB00411319 /* Assets.xcassets in Resources */,
+				767E8AD1212F91340045200E /* Info.plist in Resources */,
 				761CA16221011CB600411319 /* Main.storyboard in Resources */,
 				768D78B92102EF6200D19CC6 /* Login.storyboard in Resources */,
 				761B54442101239A007AE5CD /* GetStarted.storyboard in Resources */,
@@ -526,7 +528,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZDZTD7RCE;
-				INFOPLIST_FILE = OnBoarding/Info.plist;
+				INFOPLIST_FILE = GetGot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -544,7 +546,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZDZTD7RCE;
-				INFOPLIST_FILE = OnBoarding/Info.plist;
+				INFOPLIST_FILE = GetGot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,7 +561,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		761CA15421011CB600411319 /* Build configuration list for PBXProject "OnBoarding" */ = {
+		761CA15421011CB600411319 /* Build configuration list for PBXProject "GetGot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				761CA16921011CBB00411319 /* Debug */,
@@ -568,7 +570,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		761CA16B21011CBB00411319 /* Build configuration list for PBXNativeTarget "OnBoarding" */ = {
+		761CA16B21011CBB00411319 /* Build configuration list for PBXNativeTarget "GetGot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				761CA16C21011CBB00411319 /* Debug */,
