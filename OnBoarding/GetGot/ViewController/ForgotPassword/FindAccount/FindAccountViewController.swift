@@ -1,5 +1,5 @@
 //
-//  FincAccountViewController.swift
+//  FindAccountViewController.swift
 //  OnBoarding
 //
 //  Created by Roy Quesada on 7/23/18.

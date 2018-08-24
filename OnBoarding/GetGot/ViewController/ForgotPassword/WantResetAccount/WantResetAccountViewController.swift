@@ -24,7 +24,7 @@ class WantResetAccountViewController: OBBaseViewController {
         self.continueButton.layer.borderColor = UIColor.clear.cgColor
         
         self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.bordered, target: self, action: #selector(backHandler))
+        let newBackButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backHandler))
         self.navigationItem.leftBarButtonItem = newBackButton
 
     }

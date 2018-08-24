@@ -65,7 +65,8 @@ class CheckYourPhoneViewController: OBBaseViewController {
         self.codeTextField.inputAccessoryView = toolbar
 
         self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.bordered, target: self, action: #selector(backHandler))
+        let newBackButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backHandler))
+
         self.navigationItem.leftBarButtonItem = newBackButton
         self.title = "Reset Password"
     }

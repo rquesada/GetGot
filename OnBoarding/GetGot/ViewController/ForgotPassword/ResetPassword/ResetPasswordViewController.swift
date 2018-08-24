@@ -76,7 +76,7 @@ class ResetPasswordViewController: OBBaseViewController, UITextFieldDelegate {
         self.password2TextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.bordered, target: self, action: #selector(backHandler))
+        let newBackButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backHandler))
         self.navigationItem.leftBarButtonItem = newBackButton
         
     }

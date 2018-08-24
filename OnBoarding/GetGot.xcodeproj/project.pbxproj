@@ -20,7 +20,6 @@
 		762D50082125C19100826B73 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762D50072125C19100826B73 /* Config.swift */; };
 		7646CE792125D61F0031587A /* OBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7646CE782125D61F0031587A /* OBBaseViewController.swift */; };
 		76771B57210670BC0036B689 /* CheckYourPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76771B56210670BC0036B689 /* CheckYourPhoneViewController.swift */; };
-		767E8AD1212F91340045200E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 761CA16821011CBB00411319 /* Info.plist */; };
 		768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A321027F1D00D19CC6 /* CreateAccountStep2ViewController.swift */; };
 		768D78A72102983800D19CC6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78A62102983800D19CC6 /* WebViewController.swift */; };
 		768D78AC2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78AB2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift */; };
@@ -351,7 +350,6 @@
 			files = (
 				761CA16721011CBB00411319 /* LaunchScreen.storyboard in Resources */,
 				761CA16421011CBB00411319 /* Assets.xcassets in Resources */,
-				767E8AD1212F91340045200E /* Info.plist in Resources */,
 				761CA16221011CB600411319 /* Main.storyboard in Resources */,
 				768D78B92102EF6200D19CC6 /* Login.storyboard in Resources */,
 				761B54442101239A007AE5CD /* GetStarted.storyboard in Resources */,
@@ -589,7 +587,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZDZTD7RCE;
 				INFOPLIST_FILE = GetGot/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test123.OnBoarding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -605,7 +606,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZDZTD7RCE;
 				INFOPLIST_FILE = GetGot/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test123.OnBoarding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
