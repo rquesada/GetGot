@@ -32,6 +32,10 @@ class SyncContactsViewController: OBBaseViewController, UITextViewDelegate {
     @IBAction func syncContactsHandler(_ sender: Any) {
         debugPrint("Sync")
         
+        //Test
+        for contact in ContactsUtil.getUserContacts(){
+            contact.printContact()
+        }
         
     }
     

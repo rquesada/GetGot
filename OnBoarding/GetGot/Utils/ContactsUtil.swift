@@ -18,6 +18,7 @@ enum ContactsFilter {
 
 class UserContact: NSObject {
     
+    var identifier: String?
     var name: String?
     var lastName: String?
     var phoneNumber: [String] = [String]()
@@ -25,6 +26,7 @@ class UserContact: NSObject {
     
     
     init(contact: CNContact) {
+        identifier = contact.identifier
         name   = contact.givenName
         lastName = contact.familyName
         for phone in contact.phoneNumbers {
@@ -36,7 +38,8 @@ class UserContact: NSObject {
     }
     
     func printContact(){
-        let info = "Name =\(self.name!)"
+        let info = "id = \(self.identifier!)"
+        + " Name =\(self.name!)"
         + " LastName = \(self.lastName!)"
         + " Phones =\(self.phoneNumber)"
         + " Emails = \(self.email)"
