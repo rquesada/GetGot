@@ -31,6 +31,8 @@
 		76984156212B08E200215975 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76984155212B08E200215975 /* BaseButton.swift */; };
 		76A0AE2D2107905C0062CE02 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AE2C2107905C0062CE02 /* ResetPasswordViewController.swift */; };
 		76A0AE302108CBBB0062CE02 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AE2F2108CBBB0062CE02 /* CongratsViewController.swift */; };
+		76BC7F892130CF58001F6E08 /* ContactsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BC7F882130CF58001F6E08 /* ContactsUtil.swift */; };
+		76BC7F8B2130CFD7001F6E08 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BC7F8A2130CFD7001F6E08 /* Contacts.framework */; };
 		76C4B350210635EF008D18B5 /* FindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4B34F210635EF008D18B5 /* FindAccountViewController.swift */; };
 		76C4B354210646F1008D18B5 /* WantResetAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4B353210646F1008D18B5 /* WantResetAccountViewController.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		76984155212B08E200215975 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		76A0AE2C2107905C0062CE02 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		76A0AE2F2108CBBB0062CE02 /* CongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
+		76BC7F882130CF58001F6E08 /* ContactsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsUtil.swift; sourceTree = "<group>"; };
+		76BC7F8A2130CFD7001F6E08 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		76C4B34F210635EF008D18B5 /* FindAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAccountViewController.swift; sourceTree = "<group>"; };
 		76C4B353210646F1008D18B5 /* WantResetAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantResetAccountViewController.swift; sourceTree = "<group>"; };
 		89196ED588C3B802CCD4238B /* Pods-GetGot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetGot.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetGot/Pods-GetGot.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76BC7F8B2130CFD7001F6E08 /* Contacts.framework in Frameworks */,
 				52541DF27F922766C82A8BEB /* Pods_GetGot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +90,7 @@
 		6CC4B34413C95D9502686F9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76BC7F8A2130CFD7001F6E08 /* Contacts.framework */,
 				7662447321066107000EEA25 /* DLRadioButton.framework */,
 				CA6E31FC7CC1092E854D529D /* Pods_OnBoarding.framework */,
 				4874A4C4E5D33E93171278B3 /* Pods_GetGot.framework */,
@@ -140,6 +146,7 @@
 			children = (
 				761B544A2101301C007AE5CD /* UIUtils.swift */,
 				762D50072125C19100826B73 /* Config.swift */,
+				76BC7F882130CF58001F6E08 /* ContactsUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -413,6 +420,7 @@
 				76984156212B08E200215975 /* BaseButton.swift in Sources */,
 				761B544E21014059007AE5CD /* CreateAccountViewController.swift in Sources */,
 				768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */,
+				76BC7F892130CF58001F6E08 /* ContactsUtil.swift in Sources */,
 				761B5446210123F9007AE5CD /* GetStartedViewController.swift in Sources */,
 				768D78AE2102B3FA00D19CC6 /* EnterCodeViewController.swift in Sources */,
 				768D78AC2102A7E200D19CC6 /* PrivacyOptionsTableViewController.swift in Sources */,

@@ -31,6 +31,8 @@ class SyncContactsViewController: OBBaseViewController, UITextViewDelegate {
     
     @IBAction func syncContactsHandler(_ sender: Any) {
         debugPrint("Sync")
+        
+        
     }
     
     // MARK : - UITextViewDelegate

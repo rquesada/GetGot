@@ -28,7 +28,7 @@ class CreateAccountViewController: OBBaseViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.brandIcon.image = Config.sharedInstance.appIcon
-        self.nextButton = BaseButton.customNextButton(target: self, action: #selector(CreateAccountViewController.nextHandler))
+        self.nextButton = BaseButton.customToolBarButton(target: self, action: #selector(CreateAccountViewController.nextHandler), title: "Next")
         self.nextButton.isEnabled = false
         
         self.switchButton = UIBarButtonItem(title: "Use email instead", style: UIBarButtonItemStyle.plain, target: self, action:

@@ -22,7 +22,7 @@ class EnterCodeViewController: OBBaseViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.brandIcon.image = Config.sharedInstance.appIcon
         
-        self.nextButton = BaseButton.customNextButton(target: self, action: #selector(nextHandler))
+        self.nextButton = BaseButton.customToolBarButton(target: self, action: #selector(nextHandler), title: "Next")
         self.nextButton.isEnabled = false
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         let frame = CGRect(x: 0.0, y: 0.0, width: 375, height: 50)

@@ -18,10 +18,10 @@ class BaseButton: UIButton {
     }
     */
     
-    static func customNextButton( target: Any?, action: Selector) -> UIBarButtonItem{
+    static func customToolBarButton( target: Any?, action: Selector, title:String) -> UIBarButtonItem{
         let baseButton = BaseButton()
         baseButton.frame = CGRect(x:0, y:0, width:60, height:25)
-        baseButton.setTitle("Next", for: .normal)
+        baseButton.setTitle(title, for: .normal)
         baseButton.backgroundColor = Config.GlobalConstants.MainColor
         baseButton.layer.cornerRadius = 18.0
         baseButton.setTitleColor(Config.GlobalConstants.DisableColor, for: UIControlState.disabled)

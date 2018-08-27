@@ -24,15 +24,7 @@ class LoginViewController: OBBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.brandIcon.image = Config.sharedInstance.appIcon
-        let customButton = UIButton()
-        customButton.frame = CGRect(x:0, y:0, width:60, height:25)
-        customButton.setTitle("Log in", for: .normal)
-        customButton.backgroundColor = Config.GlobalConstants.MainColor
-        customButton.layer.cornerRadius = 18.0
-        customButton.setTitleColor(Config.GlobalConstants.DisableColor, for: UIControlState.disabled)
-        customButton.setTitleColor(Config.GlobalConstants.MainFontColor, for: UIControlState.normal)
-        customButton.addTarget(self, action: #selector(loginHandler), for: .touchUpInside)
-        self.loginButton = UIBarButtonItem(customView: customButton)
+        self.loginButton =  BaseButton.customToolBarButton(target: self, action: #selector(loginHandler), title: "Log in")
         self.loginButton.isEnabled = false
         
         self.forgotPasswordButton = UIBarButtonItem(title: "Forgot pasword?", style: UIBarButtonItemStyle.plain, target: self, action:
