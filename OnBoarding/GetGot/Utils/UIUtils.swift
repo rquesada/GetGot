@@ -14,6 +14,46 @@ class UIUtils: NSObject {
 
 }
 
+/*extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                debugPrint("Image data")
+                if let image = UIImage(data: data) {
+                    debugPrint("Image UIImage")
+                    DispatchQueue.main.async {
+                        debugPrint("Iamge load")
+                        self?.image = image
+                    }
+                }
+            }else{
+             debugPrint("Image NO data")
+            }
+        }
+    }
+}*/
+
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() {
+                self.image = image
+            }
+            }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
+}
+
 extension NSMutableAttributedString {
     
     public func setAsLink(textToFind:String, linkURL:String) -> Bool {

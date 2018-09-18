@@ -8,8 +8,16 @@
 
 import UIKit
 
+enum Enviroment:String {
+    case Beta = "http://getgotapitest.totogolcr.com"
+    case Production = "http://"
+}
+
+var currentEnv = Enviroment.Beta
+var AppBaseURL = currentEnv.rawValue
+
+
 final class Config {
-    
     
     struct GlobalConstants {
         // Constant define here.

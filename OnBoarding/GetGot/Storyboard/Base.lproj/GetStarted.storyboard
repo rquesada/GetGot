@@ -14,7 +14,7 @@
         <!--Get Started View Controller-->
         <scene sceneID="Mz4-Uj-IdC">
             <objects>
-                <viewController storyboardIdentifier="GetStartedID" id="ewb-R1-r6b" customClass="GetStartedViewController" customModule="OnBoarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GetStartedID" id="ewb-R1-r6b" customClass="GetStartedViewController" customModule="GetGot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="abg-tw-gl4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="height" constant="32" id="RpC-Z0-ePh"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krd-gm-zqz" customClass="ConfirmButton" customModule="OnBoarding" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krd-gm-zqz" customClass="ConfirmButton" customModule="GetGot" customModuleProvider="target">
                                 <rect key="frame" x="40" y="341" width="295" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -93,7 +93,7 @@
         <!--Create Account View Controller-->
         <scene sceneID="rEE-YR-Weq">
             <objects>
-                <viewController id="m4D-c1-9qp" customClass="CreateAccountViewController" customModule="OnBoarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m4D-c1-9qp" customClass="CreateAccountViewController" customModule="GetGot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1RP-48-lSj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +224,7 @@
         <!--Enter Code View Controller-->
         <scene sceneID="9gQ-0t-zjK">
             <objects>
-                <viewController id="e47-MV-JQl" customClass="EnterCodeViewController" customModule="OnBoarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="e47-MV-JQl" customClass="EnterCodeViewController" customModule="GetGot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6dV-aO-FAc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -332,7 +332,7 @@
         <!--Create Password View Controller-->
         <scene sceneID="Ca1-Yn-ZaB">
             <objects>
-                <viewController id="Zgv-4C-ld1" customClass="CreatePasswordViewController" customModule="OnBoarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zgv-4C-ld1" customClass="CreatePasswordViewController" customModule="GetGot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Tm-LV-cln">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -461,7 +461,7 @@
         <!--Sync Contacts View Controller-->
         <scene sceneID="zfu-bi-84C">
             <objects>
-                <viewController id="CVo-tt-dqw" customClass="SyncContactsViewController" customModule="OnBoarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CVo-tt-dqw" customClass="SyncContactsViewController" customModule="GetGot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B9M-AD-Xn4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -472,7 +472,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqF-sq-V30" customClass="ConfirmButton" customModule="OnBoarding" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqF-sq-V30" customClass="ConfirmButton" customModule="GetGot" customModuleProvider="target">
                                 <rect key="frame" x="115" y="184" width="144" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -550,16 +550,99 @@
                         <outlet property="descriptionTextView" destination="Jyq-tt-qVB" id="aB8-uq-iWs"/>
                         <outlet property="syncContactsButton" destination="yqF-sq-V30" id="4kb-Ks-1ju"/>
                         <segue destination="6Xb-m1-JHL" kind="show" identifier="openURLSegue2" id="f4a-TQ-U7j"/>
+                        <segue destination="LQN-Vy-08y" kind="show" identifier="followSegue" id="lf1-Sg-FSi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9WS-vJ-9di" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4409" y="-707"/>
         </scene>
+        <!--Follow List View Controller-->
+        <scene sceneID="CCm-Y6-EOB">
+            <objects>
+                <viewController id="LQN-Vy-08y" customClass="FollowListViewController" customModule="GetGot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sVt-bk-jPz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4G-Lx-jCM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow your friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujx-Sm-R8f">
+                                        <rect key="frame" x="15" y="30" width="345" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11372549019607843" green="0.63137254901960782" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ujx-Sm-R8f" firstAttribute="top" secondItem="M4G-Lx-jCM" secondAttribute="top" constant="30" id="E3N-Vw-hDU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ujx-Sm-R8f" secondAttribute="trailing" constant="15" id="Ld5-0z-W1r"/>
+                                    <constraint firstAttribute="height" constant="64" id="TXU-zu-G0H"/>
+                                    <constraint firstItem="Ujx-Sm-R8f" firstAttribute="leading" secondItem="M4G-Lx-jCM" secondAttribute="leading" constant="15" id="vXR-ma-K5I"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3T-ID-j2G">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ems-nq-P92">
+                                        <rect key="frame" x="284" y="7" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Follow"/>
+                                        <connections>
+                                            <action selector="followHandler:" destination="LQN-Vy-08y" eventType="touchUpInside" id="sMF-97-Fgk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="I7y-fz-z2Q"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ajb-FB-x39">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LQN-Vy-08y" id="RhA-YV-wbT"/>
+                                    <outlet property="delegate" destination="LQN-Vy-08y" id="mcH-ny-Ks2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ajb-FB-x39" firstAttribute="top" secondItem="M4G-Lx-jCM" secondAttribute="bottom" id="0WW-EY-NEX"/>
+                            <constraint firstItem="X3T-ID-j2G" firstAttribute="trailing" secondItem="bqK-1v-2Ln" secondAttribute="trailing" id="1fh-KY-N1f"/>
+                            <constraint firstItem="ajb-FB-x39" firstAttribute="trailing" secondItem="bqK-1v-2Ln" secondAttribute="trailing" id="5CR-Iy-GzK"/>
+                            <constraint firstItem="M4G-Lx-jCM" firstAttribute="trailing" secondItem="bqK-1v-2Ln" secondAttribute="trailing" id="9uX-cF-Agy"/>
+                            <constraint firstItem="X3T-ID-j2G" firstAttribute="top" secondItem="ajb-FB-x39" secondAttribute="bottom" id="K3M-zG-TVf"/>
+                            <constraint firstItem="ajb-FB-x39" firstAttribute="trailing" secondItem="bqK-1v-2Ln" secondAttribute="trailing" id="Ml4-G8-kFE"/>
+                            <constraint firstItem="X3T-ID-j2G" firstAttribute="leading" secondItem="bqK-1v-2Ln" secondAttribute="leading" id="SDI-IX-Pan"/>
+                            <constraint firstItem="M4G-Lx-jCM" firstAttribute="top" secondItem="sVt-bk-jPz" secondAttribute="top" id="SkB-IK-N49"/>
+                            <constraint firstItem="M4G-Lx-jCM" firstAttribute="leading" secondItem="bqK-1v-2Ln" secondAttribute="leading" id="jhn-zB-M4Q"/>
+                            <constraint firstItem="X3T-ID-j2G" firstAttribute="bottom" secondItem="bqK-1v-2Ln" secondAttribute="bottom" id="jze-bp-zvc"/>
+                            <constraint firstItem="X3T-ID-j2G" firstAttribute="top" secondItem="ajb-FB-x39" secondAttribute="bottom" id="k36-NA-zEV"/>
+                            <constraint firstItem="X3T-ID-j2G" firstAttribute="trailing" secondItem="bqK-1v-2Ln" secondAttribute="trailing" id="mpS-vj-IjC"/>
+                            <constraint firstItem="X3T-ID-j2G" firstAttribute="bottom" secondItem="bqK-1v-2Ln" secondAttribute="bottom" id="pjk-pw-uqn"/>
+                            <constraint firstItem="ajb-FB-x39" firstAttribute="leading" secondItem="bqK-1v-2Ln" secondAttribute="leading" id="uK1-Li-Ycw"/>
+                            <constraint firstItem="X3T-ID-j2G" firstAttribute="leading" secondItem="bqK-1v-2Ln" secondAttribute="leading" id="ukr-St-Llb"/>
+                            <constraint firstItem="ajb-FB-x39" firstAttribute="leading" secondItem="bqK-1v-2Ln" secondAttribute="leading" id="x5E-8t-V19"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bqK-1v-2Ln"/>
+                    </view>
+                    <connections>
+                        <outlet property="followButton" destination="ems-nq-P92" id="Yiy-15-Hj3"/>
+                        <outlet property="myTableView" destination="ajb-FB-x39" id="wXS-R4-1cB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jkk-09-8v0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5252" y="-715.59220389805103"/>
+        </scene>
         <!--Create Account Step2 View Controller-->
         <scene sceneID="gYf-zC-TTX">
             <objects>
-                <viewController id="hec-IU-NrB" customClass="CreateAccountStep2ViewController" customModule="OnBoarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hec-IU-NrB" customClass="CreateAccountStep2ViewController" customModule="GetGot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gEy-bb-4ee">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -646,7 +729,7 @@
                                     <outlet property="delegate" destination="hec-IU-NrB" id="9gs-OG-ucp"/>
                                 </connections>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcV-op-5DA" customClass="ConfirmButton" customModule="OnBoarding" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcV-op-5DA" customClass="ConfirmButton" customModule="GetGot" customModuleProvider="target">
                                 <rect key="frame" x="36" y="500" width="303" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -719,7 +802,7 @@
         <!--Web View Controller-->
         <scene sceneID="utv-xr-IKF">
             <objects>
-                <viewController storyboardIdentifier="webViewID" id="KKp-xI-wTK" customClass="WebViewController" customModule="OnBoarding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webViewID" id="KKp-xI-wTK" customClass="WebViewController" customModule="GetGot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iWg-Hj-1iB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -774,7 +857,7 @@
         <!--Privacy Options-->
         <scene sceneID="fGR-1U-nDo">
             <objects>
-                <tableViewController id="HEJ-eu-6nJ" customClass="PrivacyOptionsTableViewController" customModule="OnBoarding" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="HEJ-eu-6nJ" customClass="PrivacyOptionsTableViewController" customModule="GetGot" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="b7G-hF-pxl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

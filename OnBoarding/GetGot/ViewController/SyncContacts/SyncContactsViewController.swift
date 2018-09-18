@@ -15,9 +15,12 @@ class SyncContactsViewController: OBBaseViewController, UITextViewDelegate {
     @IBOutlet weak var brandIcon: UIImageView!
     
     var openURL:URL!
+    var vm:SyncContactsViewModel?
+    var listOfContacts:[Dictionary<String,String>]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.vm = SyncContactsViewModel()
         self.brandIcon.image =  Config.sharedInstance.appIcon
         
         let attributedString = NSMutableAttributedString(string:"Contacts from your address book will be uploaded to Twitter on an ongoing basis. You can turn off syncing and remove previously uploaded contacts in your settings. Learn More")
@@ -27,10 +30,14 @@ class SyncContactsViewController: OBBaseViewController, UITextViewDelegate {
     
     @IBAction func notNowHandler(_ sender: Any) {
         debugPrint("Not now")
+        
     }
     
     @IBAction func syncContactsHandler(_ sender: Any) {
-        debugPrint("Sync")
+        self.vm?.getGetGotUsers(completion: { (users, errorString) in
+            self.listOfContacts = users
+            self.performSegue(withIdentifier: "followSegue", sender: nil)
+        })
         
     }
     
@@ -46,6 +53,8 @@ class SyncContactsViewController: OBBaseViewController, UITextViewDelegate {
         if let nav = segue.destination as? UINavigationController,
             let webVC = nav.topViewController as? WebViewController{
             webVC.openURL = self.openURL
+        }else if let vc = segue.destination  as? FollowListViewController{
+            vc.contacts = self.listOfContacts
         }
     }
 }

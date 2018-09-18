@@ -80,6 +80,14 @@ class ContactsUtil: NSObject {
         }
         return JSON(array)
     }
+    
+    static func getContacts() -> [[String: Any?]]{
+        var array = [[String: Any?]]()
+        for contact in ContactsUtil.getCNContacts(){
+            array.append(contact.getDictionary())
+        }
+        return array
+    }
 }
 
 
