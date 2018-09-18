@@ -16,6 +16,11 @@ class GetStartedViewController: OBBaseViewController {
         super.viewDidLoad()
         self.brandIcon.image  = Config.sharedInstance.appIcon
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.hideNavigationBar()
+    }
 
     @IBAction func loginHandler(_ sender: Any) {
         

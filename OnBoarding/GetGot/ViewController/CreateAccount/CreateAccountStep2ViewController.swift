@@ -65,7 +65,11 @@ class CreateAccountStep2ViewController: OBBaseViewController, UITextViewDelegate
     }
     
     @IBAction func backHandler(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        if let nc = self.navigationController{
+            nc.popViewController(animated: true)
+        }else{
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

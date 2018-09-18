@@ -30,7 +30,7 @@ class SyncContactsViewController: OBBaseViewController, UITextViewDelegate {
     
     @IBAction func notNowHandler(_ sender: Any) {
         debugPrint("Not now")
-        
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func syncContactsHandler(_ sender: Any) {

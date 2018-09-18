@@ -56,7 +56,12 @@ class EnterCodeViewController: OBBaseViewController, UITextFieldDelegate {
     }
 
     @IBAction func backHandler(_ sender: Any) {
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        if let nc = self.navigationController{
+            let viewControllers: [UIViewController] = nc.viewControllers as [UIViewController]
+            self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
+        }else{
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func didReceiveHandler(_ sender: UIBarButtonItem) {

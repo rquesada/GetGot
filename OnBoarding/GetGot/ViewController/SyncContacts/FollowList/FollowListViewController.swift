@@ -31,7 +31,7 @@ class FollowListViewController: OBBaseViewController, UITableViewDelegate, UITab
                 debugPrint("Log error")
             }else{
                 debugPrint("GO TO Main")
-                self.parent?.parent?.dismiss(animated: false, completion: nil)
+                self.navigationController?.popToRootViewController(animated: true)
             }
         })
     }

@@ -20,12 +20,14 @@ class ViewController: OBBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.vm = MainViewModel()
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         self.checkLatestVersion()
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.showNavigationBar()
+    }
+    
     @IBAction func logoutHandler(_ sender: Any) {
         self.showLogin()
     }
@@ -36,8 +38,6 @@ class ViewController: OBBaseViewController {
     }
     
     @IBAction func showMenuHandler(_ sender: Any) {
-        
-//        self.menuRightConstraint.constant = menuIsVisible ? 0 : -240
         self.menuLeftConstraint.constant = menuIsVisible ? -240 : 0
         menuIsVisible = !menuIsVisible
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
@@ -49,7 +49,7 @@ class ViewController: OBBaseViewController {
         //Show GetStarted
         let storyboard = UIStoryboard(name: "GetStarted", bundle: nil)
         let controller: GetStartedViewController = storyboard.instantiateViewController(withIdentifier: "GetStartedID") as! GetStartedViewController
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func isLogin() -> Bool{

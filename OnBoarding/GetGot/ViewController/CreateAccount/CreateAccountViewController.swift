@@ -63,7 +63,11 @@ class CreateAccountViewController: OBBaseViewController, UITextFieldDelegate {
     
     // MARK: - Handler
     @IBAction func cancelHandler(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        if let nc = self.navigationController{
+            nc.popViewController(animated: true)
+        }else{
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @objc func nextHandler(){

@@ -13,25 +13,19 @@ class UIUtils: NSObject {
     
 
 }
-
-/*extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                debugPrint("Image data")
-                if let image = UIImage(data: data) {
-                    debugPrint("Image UIImage")
-                    DispatchQueue.main.async {
-                        debugPrint("Iamge load")
-                        self?.image = image
-                    }
-                }
-            }else{
-             debugPrint("Image NO data")
-            }
-        }
+extension UIViewController {
+    func hideNavigationBar(){
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
     }
-}*/
+    
+    func showNavigationBar() {
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+}
 
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {

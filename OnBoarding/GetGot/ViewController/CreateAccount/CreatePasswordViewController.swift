@@ -51,7 +51,11 @@ class CreatePasswordViewController: OBBaseViewController {
     }
     
     @IBAction func backHandler(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        if let nc = self.navigationController{
+            nc.popViewController(animated: true)
+        }else{
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
