@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FollowTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
+    var userID:String!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

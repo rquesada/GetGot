@@ -32,6 +32,8 @@
 		768D78B62102EB8400D19CC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768D78B52102EB8400D19CC6 /* LoginViewController.swift */; };
 		768D78B92102EF6200D19CC6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768D78B72102EF6200D19CC6 /* Login.storyboard */; };
 		76984156212B08E200215975 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76984155212B08E200215975 /* BaseButton.swift */; };
+		769F23E721513D95005AB263 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F23E621513D95005AB263 /* MainViewModel.swift */; };
+		769F23EA21514D79005AB263 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F23E921514D79005AB263 /* ProfileViewController.swift */; };
 		76A0AE2D2107905C0062CE02 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AE2C2107905C0062CE02 /* ResetPasswordViewController.swift */; };
 		76A0AE302108CBBB0062CE02 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AE2F2108CBBB0062CE02 /* CongratsViewController.swift */; };
 		76BC7F892130CF58001F6E08 /* ContactsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BC7F882130CF58001F6E08 /* ContactsUtil.swift */; };
@@ -39,6 +41,7 @@
 		76BF207121505EBE006771A6 /* FollowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BF207021505EBE006771A6 /* FollowListViewController.swift */; };
 		76BF20772150710F006771A6 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BF20752150710F006771A6 /* FollowTableViewCell.swift */; };
 		76BF20782150710F006771A6 /* FollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BF20762150710F006771A6 /* FollowTableViewCell.xib */; };
+		76BF207A2150B9B6006771A6 /* FollowListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BF20792150B9B6006771A6 /* FollowListViewModel.swift */; };
 		76C4B350210635EF008D18B5 /* FindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4B34F210635EF008D18B5 /* FindAccountViewController.swift */; };
 		76C4B354210646F1008D18B5 /* WantResetAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4B353210646F1008D18B5 /* WantResetAccountViewController.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +75,8 @@
 		768D78B52102EB8400D19CC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		768D78B82102EF6200D19CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		76984155212B08E200215975 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		769F23E621513D95005AB263 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		769F23E921514D79005AB263 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		76A0AE2C2107905C0062CE02 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		76A0AE2F2108CBBB0062CE02 /* CongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
 		76BC7F882130CF58001F6E08 /* ContactsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsUtil.swift; sourceTree = "<group>"; };
@@ -79,6 +84,7 @@
 		76BF207021505EBE006771A6 /* FollowListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowListViewController.swift; sourceTree = "<group>"; };
 		76BF20752150710F006771A6 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
 		76BF20762150710F006771A6 /* FollowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowTableViewCell.xib; sourceTree = "<group>"; };
+		76BF20792150B9B6006771A6 /* FollowListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowListViewModel.swift; sourceTree = "<group>"; };
 		76C4B34F210635EF008D18B5 /* FindAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAccountViewController.swift; sourceTree = "<group>"; };
 		76C4B353210646F1008D18B5 /* WantResetAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantResetAccountViewController.swift; sourceTree = "<group>"; };
 		89196ED588C3B802CCD4238B /* Pods-GetGot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetGot.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetGot/Pods-GetGot.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 		761B543C2101229E007AE5CD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				769F23E821514D4F005AB263 /* Profile */,
 				7646CE752125D4F50031587A /* Base */,
 				76C4B352210646D3008D18B5 /* ForgotPassword */,
 				768D78B42102EB7400D19CC6 /* Login */,
@@ -141,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				761CA15E21011CB600411319 /* ViewController.swift */,
+				769F23E621513D95005AB263 /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -259,6 +267,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		769F23E821514D4F005AB263 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				769F23E921514D79005AB263 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		76A0AE2B210790430062CE02 /* ResetPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				76BF207021505EBE006771A6 /* FollowListViewController.swift */,
+				76BF20792150B9B6006771A6 /* FollowListViewModel.swift */,
 			);
 			path = FollowList;
 			sourceTree = "<group>";
@@ -443,11 +460,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GetGot/Pods-GetGot-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,9 +490,11 @@
 				76C4B354210646F1008D18B5 /* WantResetAccountViewController.swift in Sources */,
 				76A0AE2D2107905C0062CE02 /* ResetPasswordViewController.swift in Sources */,
 				76A0AE302108CBBB0062CE02 /* CongratsViewController.swift in Sources */,
+				76BF207A2150B9B6006771A6 /* FollowListViewModel.swift in Sources */,
 				76984156212B08E200215975 /* BaseButton.swift in Sources */,
 				761B544E21014059007AE5CD /* CreateAccountViewController.swift in Sources */,
 				768D78A421027F1D00D19CC6 /* CreateAccountStep2ViewController.swift in Sources */,
+				769F23EA21514D79005AB263 /* ProfileViewController.swift in Sources */,
 				76BC7F892130CF58001F6E08 /* ContactsUtil.swift in Sources */,
 				761B5446210123F9007AE5CD /* GetStartedViewController.swift in Sources */,
 				768D78AE2102B3FA00D19CC6 /* EnterCodeViewController.swift in Sources */,
@@ -487,6 +508,7 @@
 				761B544B2101301C007AE5CD /* UIUtils.swift in Sources */,
 				7644CEA921473B0600C5F585 /* ErrorHandler.swift in Sources */,
 				76C4B350210635EF008D18B5 /* FindAccountViewController.swift in Sources */,
+				769F23E721513D95005AB263 /* MainViewModel.swift in Sources */,
 				768D78B02102D8F200D19CC6 /* CreatePasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

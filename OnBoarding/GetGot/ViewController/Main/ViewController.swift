@@ -9,27 +9,65 @@
 import UIKit
 
 class ViewController: OBBaseViewController {
-
+    
+    @IBOutlet weak var menuRightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var menuLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var slideMenuView: UIView!
+    
+    var vm:MainViewModel?
+    var menuIsVisible = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        self.vm = MainViewModel()
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.checkLatestVersion()
         
-        if !isLogin(){
-            //Show GetStarted
-            let storyboard = UIStoryboard(name: "GetStarted", bundle: nil)
-            let controller: GetStartedViewController = storyboard.instantiateViewController(withIdentifier: "GetStartedID") as! GetStartedViewController
-            self.present(controller, animated: true, completion: nil)
-        }
     }
-
+    @IBAction func logoutHandler(_ sender: Any) {
+        self.showLogin()
+    }
+    
+    
+    @IBAction func profileHandler(_ sender: Any) {
+        self.performSegue(withIdentifier: "profileSegue", sender: nil)
+    }
+    
+    @IBAction func showMenuHandler(_ sender: Any) {
+        
+//        self.menuRightConstraint.constant = menuIsVisible ? 0 : -240
+        self.menuLeftConstraint.constant = menuIsVisible ? -240 : 0
+        menuIsVisible = !menuIsVisible
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    func showLogin(){
+        //Show GetStarted
+        let storyboard = UIStoryboard(name: "GetStarted", bundle: nil)
+        let controller: GetStartedViewController = storyboard.instantiateViewController(withIdentifier: "GetStartedID") as! GetStartedViewController
+        self.present(controller, animated: true, completion: nil)
+    }
+    
     func isLogin() -> Bool{
         //ToDo: Implement Funcionality
-        return false
+        return true
+    }
+    
+    func checkLatestVersion(){
+        self.vm?.isLastestVersion(completion: { isUpdated in
+            if isUpdated{
+                if !self.isLogin(){
+                    self.showLogin()
+                }
+            }else{
+                let errorVC = ErrorHandler.errorAlertController(message: "GetGot requiere an update")
+                self.present(errorVC, animated: true, completion: nil)
+            }
+        })
     }
 }
 
